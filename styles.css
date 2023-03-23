@@ -1,0 +1,31 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+#introduction {
+  font-size: 50;
+}
+
+.boldYellow {
+  color: yellow;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header-list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.header-button {
+  border-style: dashed;
+  background-color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5%;
+  margin: 0%;
+}
