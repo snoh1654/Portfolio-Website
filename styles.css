@@ -1,31 +1,102 @@
 * {
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  /* makes border and padding be included in the width/height */
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+
+  /* outline: solid; */
+  /* border: solid;
+  border-color: blue; */
+  /* for debugging */
+}
+
+a {
+  text-decoration-color: black;
 }
 
 #introduction {
-  font-size: 50;
+  font-size: 32px;
 }
 
-.boldYellow {
-  color: yellow;
+.bold-yellow {
+  color: orangered;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.circle {
+  background-color: lightblue;
+  width: 1%;
 }
 
 .header-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  position: fixed;
+  width: 100%;
 }
 
 .header-list {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   width: 50%;
 }
 
-.header-button {
-  border-style: dashed;
-  background-color: white;
-  width: fit-content;
-  height: fit-content;
-  padding: 0.5%;
-  margin: 0%;
+.header-element {
+  text-align: center;
+  cursor: pointer;
+  padding: 1.5vh;
+  margin: 1vh;
+  color: black;
+}
+
+.header-element:hover {
+  text-align: left;
+  background-color: rgb(1, 197, 197);
+  border-radius: 15px;
+  transform: scale(1.1);
+}
+
+.header-element:active {
+  transform: scale(0.9);
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.header-element:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.intro {
+  height: 100vh;
+  background-color: grey;
+}
+
+.personal {
+  height: 100vh;
+  background-color: rgb(88, 88, 88);
+}
+
+.skills {
+  height: 100vh;
+  background-color: rgb(63, 63, 63);
+}
+
+.projects {
+  height: 100vh;
+  background-color: rgb(54, 54, 54);
+}
+
+.contact {
+  height: 100vh;
+  background-color: rgb(19, 19, 19);
 }
