@@ -20,19 +20,24 @@ a {
   font-size: 32px;
 }
 
-.bold-yellow {
+.strong-text {
   color: orangered;
 }
 
 .location {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
+  left: 97.5vw;
+  top: 40vh;
 }
 
 .circle {
   background-color: lightblue;
-  width: 1%;
+  width: 1vw;
+  border-radius: 50%;
+  margin: 0.2vh;
+  height: 2vh;
 }
 
 .header-container {
@@ -54,7 +59,7 @@ a {
   text-align: center;
   cursor: pointer;
   padding: 1.5vh;
-  margin: 1vh;
+
   color: black;
 }
 
@@ -67,7 +72,7 @@ a {
 
 .header-element:active {
   transform: scale(0.9);
-  background-color: #f2f2f2;
+  background-color: white;
   color: #333;
 }
 
@@ -79,6 +84,17 @@ a {
 .intro {
   height: 100vh;
   background-color: grey;
+}
+
+.socials-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: fit-content;
+}
+
+.socials-link {
+  width: fit-content;
 }
 
 .personal {
