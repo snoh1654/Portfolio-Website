@@ -5,6 +5,7 @@
   margin: 0px;
   padding: 0px;
   scroll-behavior: smooth;
+  font-weight: normal;
 
   /* outline: solid; */
   /* border: solid;
@@ -12,36 +13,35 @@
   /* for debugging */
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: lightgrey lightgrey;
+}
+
 html::-webkit-scrollbar {
-  width: 1vw;
+  width: 0.45vw;
 }
 
-a {
+html::-webkit-scrollbar-thumb {
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: black;
+  transition-delay: 0.1ms;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: grey;
+}
+
+html::-webkit-scrollbar-track:hover {
+  background-color: white;
+}
+
+html::-webkit-scrollbar-corner a {
   text-decoration-color: black;
-}
-
-#introduction {
-  font-size: 32px;
-}
-
-.strong-text {
-  color: orangered;
-}
-
-.location {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 97.5vw;
-  top: 40vh;
-}
-
-.circle {
-  background-color: lightblue;
-  width: 0.8vw;
-  border-radius: 50%;
-  margin: 0.3vh;
-  height: 1.5vh;
 }
 
 .header-container {
@@ -85,6 +85,32 @@ a {
   text-decoration: none;
 }
 
+/* HOME */
+
+#introduction {
+  font-size: 32px;
+}
+
+.strong-text {
+  color: orangered;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 98vw;
+  top: 40vh;
+}
+
+.circle {
+  background-color: lightblue;
+  width: 0.8vw;
+  border-radius: 50%;
+  margin: 0.5vh;
+  height: 1.5vh;
+}
+
 .intro {
   height: 100vh;
   background-color: grey;
@@ -101,20 +127,28 @@ a {
   width: fit-content;
 }
 
+/* ABOUT */
+
 .personal {
   height: 100vh;
   background-color: rgb(88, 88, 88);
 }
+
+/* SKILLS */
 
 .skills {
   height: 100vh;
   background-color: rgb(63, 63, 63);
 }
 
+/* PROJECTS */
+
 .projects {
   height: 100vh;
   background-color: rgb(54, 54, 54);
 }
+
+/* CONTACT */
 
 .contact {
   height: 100vh;
