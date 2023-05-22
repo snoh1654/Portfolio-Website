@@ -8,8 +8,8 @@
   font-weight: normal;
 
   /* outline: solid; */
-  /* border: solid;
-  border-color: blue; */
+  /* border: solid; */
+  /* border-color: blue; */
   /* for debugging */
 }
 
@@ -19,28 +19,29 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: 0.45vw;
+  width: 0.5vw;
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: lightgrey;
-  border-radius: 10px;
+  background-color: grey;
+  border-radius: 100vw;
+  border: 0.15vw solid lightgrey;
 }
 
-html::-webkit-scrollbar-thumb:hover {
+/* html::-webkit-scrollbar-thumb:hover {
   background-color: black;
   transition-delay: 0.1ms;
-}
+} */
 
 html::-webkit-scrollbar-track {
-  background-color: grey;
+  background-color: lightgrey;
 }
 
-html::-webkit-scrollbar-track:hover {
+/* html::-webkit-scrollbar-track:hover {
   background-color: white;
-}
+} */
 
-html::-webkit-scrollbar-corner a {
+a {
   text-decoration-color: black;
 }
 
@@ -50,6 +51,7 @@ html::-webkit-scrollbar-corner a {
   justify-content: center;
   position: fixed;
   width: 100%;
+  gap: 10px;
 }
 
 .header-list {
@@ -85,9 +87,38 @@ html::-webkit-scrollbar-corner a {
   text-decoration: none;
 }
 
+.circle {
+  background-color: lightblue;
+  width: 0.8vw;
+  border-radius: 50%;
+  margin: 0.5vh;
+  height: 1.5vh;
+}
+
+.circle.light {
+  background-color: black;
+}
+
+/* .icon-container {
+  margin-top: 0.1rem;
+  width: 2.3vw;
+  height: fit-content;
+  display: inline-block;
+}
+
+.icon-container img {
+  width: 100%;
+} */
+
 /* HOME */
 
-#introduction {
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+
+.introduction {
   font-size: 32px;
 }
 
@@ -98,22 +129,13 @@ html::-webkit-scrollbar-corner a {
 .location {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 98vw;
-  top: 40vh;
-}
-
-.circle {
-  background-color: lightblue;
-  width: 0.8vw;
-  border-radius: 50%;
-  margin: 0.5vh;
-  height: 1.5vh;
+  justify-self: end;
+  align-self: center;
 }
 
 .intro {
   height: 100vh;
-  background-color: grey;
+  background-color: rgb(231, 231, 231);
 }
 
 .socials-container {
@@ -121,6 +143,7 @@ html::-webkit-scrollbar-corner a {
   flex-direction: column;
   gap: 1vh;
   width: fit-content;
+  align-self: end;
 }
 
 .socials-link {
