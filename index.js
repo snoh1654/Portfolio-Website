@@ -4,6 +4,22 @@
 
 const nav = document.querySelector(".header-container");
 const navButton = document.querySelector(".header-element");
+
+const skillContainer = document.querySelectorAll(".skill-container");
+skillContainer.forEach((container) => {
+  container.addEventListener("mouseenter", (e) => {
+    console.log("enter");
+    e.target.style.backgroundColor = "red";
+    e.target.lastElementChild.classList.toggle("hidden-text");
+  });
+
+  container.addEventListener("mouseleave", (e) => {
+    console.log("leave");
+    e.target.style.backgroundColor = "white";
+    e.target.lastElementChild.classList.toggle("hidden-text");
+  });
+});
+
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {

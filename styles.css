@@ -51,7 +51,6 @@ a {
   justify-content: center;
   position: fixed;
   width: 100%;
-  gap: 10px;
   transition: transform 0.4s;
 }
 
@@ -124,7 +123,7 @@ a {
 }
 
 .introduction {
-  font-size: 52px;
+  font-size: 3.5rem;
 }
 
 .first-line {
@@ -177,7 +176,7 @@ a {
 }
 
 .personal-text {
-  font-size: 26px;
+  font-size: 2rem;
   width: 40%;
 }
 
@@ -193,8 +192,44 @@ a {
 
 .skills {
   height: 100vh;
-  background-color: rgb(63, 63, 63);
+  /* background-color: rgb(63, 63, 63); */
 }
+
+.skill-container {
+  position: relative;
+  display: inline-block;
+}
+
+.skill-container:hover {
+  background-color: black;
+}
+
+.skill-img {
+  width: 5rem;
+  height: 5rem;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.skill-header {
+}
+
+.hidden-text {
+  visibility: hidden;
+}
+
+/* 
+.skill-image {
+  width: 5vw;
+  height: 7.5vh;
+  object-fit: cover;
+
+          <img
+            src="./images/HTML5_logo_and_wordmark.svg.png"
+            alt="HTML"
+            class="skill-image"
+          />
+} */
 
 /* PROJECTS */
 
