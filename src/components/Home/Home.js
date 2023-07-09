@@ -1,6 +1,7 @@
 import LogoTitle from '../../assets/images/logo-s.png'
 import { Link } from 'react-router-dom'
 import './Home.scss'
+import Logo from '../Logo/Logo'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
           CONTACT ME
         </Link>
       </div>
+      <Logo />
     </div>
   )
 }
