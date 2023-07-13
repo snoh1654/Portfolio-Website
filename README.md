@@ -1,3 +1,3 @@
 # Personal-Portfolio
 
-HTML and CSS files for my Personal Portfolio Website
+## I converted my portfolio from Vanilla JS to React. This is not my current portfolio website.
