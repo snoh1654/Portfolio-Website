@@ -32,22 +32,22 @@ const Contact = () => {
       <div className="container contact-page">
         <div className="text-zone">
           <h1>Contact Me</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            veniam vitae officiis aliquam doloremque recusandae alias labore
-            praesentium debitis omnis! Aut commodi laudantium rerum aperiam
-            consectetur libero possimus voluptas illum?
-          </p>
+          <p>If you are</p> !!!
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input type="text" name="name" placeholder="Name" required />
+                  <input
+                    type="text"
+                    name="user_name"
+                    placeholder="Name"
+                    required
+                  />
                 </li>
                 <li className="half">
                   <input
                     type="email"
-                    name="email"
+                    name="user_email"
                     placeholder="Email"
                     required
                   />

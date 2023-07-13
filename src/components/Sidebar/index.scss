@@ -17,7 +17,7 @@
       height: auto;
 
       &.sub-logo {
-        width: 50px;
+        width: 45px;
       }
     }
   }
@@ -58,7 +58,7 @@
       &:after {
         content: '';
         font-size: 9px;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         position: absolute;
         bottom: 0;
         display: block;
