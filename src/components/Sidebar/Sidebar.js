@@ -1,12 +1,14 @@
-import './index.scss'
+import './Sidebar.scss'
 import { Link, NavLink } from 'react-router-dom'
 import LogoS from '../../assets/images/logo-s.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
+  faBook,
   faEnvelope,
   faHandPaper,
   faHome,
+  faLaptopCode,
   faPaperclip,
   faSheetPlastic,
   faUser,
@@ -21,8 +23,13 @@ const Sidebar = () => {
         <img className="sub-logo" src={LogoSubtitle} alt="logo-subtitle" />
       </Link>
 
-      <nav>
-        <NavLink exact="true" activeclassname="active" to="/">
+      <nav className="main-nav">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          className="home-link"
+          to="/"
+        >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e"></FontAwesomeIcon>
         </NavLink>
         <NavLink
@@ -36,6 +43,25 @@ const Sidebar = () => {
         <NavLink
           exact="true"
           activeclassname="active"
+          className="skills-link"
+          to="/skills"
+        >
+          <FontAwesomeIcon icon={faBook} color="#4d4d4e"></FontAwesomeIcon>
+        </NavLink>
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          className="projects-link"
+          to="/projects"
+        >
+          <FontAwesomeIcon
+            icon={faLaptopCode}
+            color="#4d4d4e"
+          ></FontAwesomeIcon>
+        </NavLink>
+        <NavLink
+          exact="true"
+          activeclassname="active"
           className="contact-link"
           to="/contact"
         >
@@ -43,7 +69,7 @@ const Sidebar = () => {
         </NavLink>
       </nav>
 
-      <ul>
+      <ul className="socials-link">
         <li>
           <a
             target="_blank"
