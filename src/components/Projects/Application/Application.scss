@@ -1,0 +1,88 @@
+.application-container {
+  // * {
+  //   outline: solid;
+  // }
+  // outline: solid;
+  outline-width: 1px;
+  width: 96vw;
+  margin: 0px;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1.5fr;
+  gap: 10px;
+  height: 35vh;
+
+  .application-header {
+    margin-top: 1vw;
+    .project-name {
+      font-size: 42px;
+      color: red;
+      display: inline;
+    }
+
+    .github-link {
+      margin-left: 1.5em;
+      vertical-align: bottom;
+
+      .github-link-img {
+        width: 2em;
+        border-radius: 1em;
+      }
+
+      .github-link-img:hover {
+        background-color: black;
+      }
+    }
+  }
+
+  .project-description {
+    margin-top: 0px;
+  }
+
+  .application-images {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    justify-self: left;
+    align-self: center;
+
+    position: relative;
+
+    .project-image-container {
+      width: fit-content;
+
+      .project-image {
+        width: 45vw;
+        object-fit: contain;
+        transition: 0.5s ease;
+        border-radius: 3px;
+        border: 2px solid black;
+      }
+
+      .project-image-title {
+        content: 'DataS';
+        position: absolute;
+        opacity: 0;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transition: all 0.3s ease-out;
+        text-align: center;
+        padding: 0;
+      }
+
+      &:hover {
+        .project-image-title {
+          opacity: 1;
+        }
+
+        .project-image {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
