@@ -1,0 +1,19 @@
+$initial-color: white;
+$after-color: black;
+
+.skill-name {
+  color: $after-color;
+  background-color: $initial-color;
+  width: fit-content;
+  padding: 0.2em;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.5s ease-out 100ms;
+  margin: 2px;
+  display: inline-block;
+
+  &:hover {
+    color: $initial-color;
+    background-color: $after-color;
+  }
+}
