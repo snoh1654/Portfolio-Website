@@ -12,3 +12,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: lightgrey lightgrey;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 100vw;
+  border: 0.15vw solid lightgrey;
+}
