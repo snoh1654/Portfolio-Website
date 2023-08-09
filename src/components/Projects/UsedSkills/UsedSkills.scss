@@ -1,5 +1,5 @@
-$initial-color: white;
-$after-color: black;
+$initial-color: #ffd700;
+$after-color: #022c43;
 
 .skill-name {
   color: $after-color;
@@ -15,5 +15,6 @@ $after-color: black;
   &:hover {
     color: $initial-color;
     background-color: $after-color;
+    cursor: default;
   }
 }
