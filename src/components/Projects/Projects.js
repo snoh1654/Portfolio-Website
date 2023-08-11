@@ -39,7 +39,7 @@ const Projects = () => {
 
   return (
     <>
-      <h1 className="projects-header">Projects</h1>
+      <h1 className="projects-header page-header">Projects</h1>
       <div className="container projects-page">
         <Application
           name="Library Search System"
