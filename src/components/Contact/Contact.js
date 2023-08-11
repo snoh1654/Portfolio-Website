@@ -31,8 +31,14 @@ const Contact = () => {
     <>
       <div className="container contact-page">
         <div className="text-zone">
-          <h1>Contact Me</h1>
-          <p>If you are</p> !!!
+          <h1 className="contact-header-title">Contact Me</h1>
+          <p className="contact-header-paragraph">
+            Thank you for taking the time to view my portfolio website!
+          </p>
+          <p className="contact-header-paragraph">
+            Feel free to reach out using either the form below or through my
+            contacts on the right.
+          </p>
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>
               <ul>
@@ -74,7 +80,14 @@ const Contact = () => {
             </form>
           </div>
         </div>
+
+        <section className="contact-info-container">
+          <h2 className="contact-info-header">Contact Information:</h2>
+          <h3 className="contact-info">Email: seannoh1654@yahoo.ca</h3>
+          <h3 className="contact-info">Phone: (604)-441-6549</h3>
+        </section>
       </div>
+
       <Loader type="pacman" />
     </>
   )

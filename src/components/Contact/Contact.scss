@@ -15,7 +15,7 @@
       display: block;
       position: relative;
       opacity: 0;
-      animation: jackInTheBox 1s 2s;
+      animation: jackInTheBox 1s 0.5s;
       animation-fill-mode: forwards;
       clear: both;
     }
@@ -67,4 +67,42 @@
     float: right;
     border-radius: 4px;
   }
+}
+
+.contact-info-container {
+  width: 30vw;
+  height: 40vh;
+  margin-left: 60vw;
+  margin-top: 25vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  animation: jackInTheBox 1s 0.5s;
+  animation-fill-mode: forwards;
+  transition: all 0.5s ease-out 0.1s;
+
+  border-radius: 15px;
+  background-color: green;
+
+  .contact-info-header {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 4px;
+  }
+  .contact-info {
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 3px;
+  }
+
+  &:hover {
+    background-color: purple;
+  }
+}
+
+.contact-header-paragraph {
+  font-size: 18px;
+  font-family: 'Roboto';
 }
