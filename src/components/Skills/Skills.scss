@@ -2,6 +2,7 @@
   margin: 0px;
   margin-left: 7.5vw;
   margin-top: 2vh;
+  margin-bottom: 2vh;
 
   font-size: 58px;
   font-family: 'sans-serif';
@@ -13,19 +14,37 @@
 }
 
 .skills-page {
+  position: static;
   margin: 0;
   margin-left: 5vw;
   width: 95vw;
-  height: 95%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-items: center;
+  height: 85%;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // align-items: center;
+  // justify-items: center;
+}
+
+.skills-paragraph {
+  margin: 1vh;
+  display: block;
+  font-size: 20px;
+}
+
+.top-page-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0px;
+  margin-bottom: 15vh;
+  position: relative;
 }
 
 .listed-skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  row-gap: 3vh;
 }
 
 // .left-skills {

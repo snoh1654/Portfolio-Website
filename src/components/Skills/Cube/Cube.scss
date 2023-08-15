@@ -1,6 +1,7 @@
 .stage-cube-cont {
   width: 50%;
-  height: 100%;
+  height: auto;
+
   // padding-top: 18%;
   // margin-left: 0;
   // top: 0;
@@ -16,7 +17,6 @@
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
   margin-left: calc(50% - 100px);
-  overflow: hidden;
 
   div {
     position: absolute;

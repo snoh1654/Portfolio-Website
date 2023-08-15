@@ -10,11 +10,18 @@ const Skills = () => {
     <>
       <h1 className="skills-title">Skills</h1>
       <main className="container skills-page">
-        <h3 className="skills-paragraph">
-          I am confident in using a variety of different technical skills and
-          langauges. These are some of the technical skills that I am most
-          proficient in!
-        </h3>
+        <section className="top-page-skills">
+          <div className="skills-paragraph-container">
+            <h3 className="skills-paragraph">
+              I am proficient in using a variety of different technical skills
+              and languages.
+            </h3>
+            <h3 className="skills-paragraph">
+              These are the technical skills that I am most confident in!
+            </h3>
+          </div>
+          <Cube></Cube>
+        </section>
 
         <section className="listed-skills">
           <div className="languages">
@@ -63,8 +70,6 @@ const Skills = () => {
             ></SkillCategory>
           </div>
         </section>
-
-        <Cube></Cube>
       </main>
 
       <Loader type="pacman" />

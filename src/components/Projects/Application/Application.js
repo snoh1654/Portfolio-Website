@@ -14,7 +14,7 @@ const Application = ({
       <section className="application-header">
         <h2 className="project-name">{name}</h2>
 
-        <a href={link} className="github-link">
+        <a href={link} className="github-link" target="_blank">
           <img
             src="github-mark-white.png"
             alt={'Link to ' + { name } + "'s github"}

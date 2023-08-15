@@ -1,5 +1,5 @@
 .category-container {
-  height: 23vh;
+  height: 25vh;
   box-sizing: border-box;
 
   // border: 0.11em dashed white;
@@ -7,6 +7,7 @@
   border-color: #ffd700;
   border-width: 3px;
   border-radius: 15px;
+  background-color: #0e1538;
   margin: 0px;
   font-size: 24px;
   text-align: center;
@@ -16,12 +17,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0.75em 1em 1em;
+  padding: 1em 1.5em 1.5em;
   position: relative;
   overflow: hidden;
 
   &:hover {
     border: none;
+    background-color: inherit;
   }
 
   &:hover::before {
@@ -40,8 +42,8 @@
     position: absolute;
     background: #0e1538;
     z-index: 1;
-    inset: 5px;
-    border-radius: 16px;
+    inset: 3px;
+    border-radius: 15px;
   }
 
   .category-name {
@@ -70,7 +72,7 @@
 
     .category-img {
       box-sizing: border-box;
-      width: 5vw;
+      width: 6vw;
       display: block;
       margin: 0;
       transition: opacity 0.3s ease 0s;
@@ -79,6 +81,7 @@
 
     .category-img-name {
       font-size: 22px;
+      text-align: center;
       font-weight: 400;
       margin: auto;
       position: absolute;
