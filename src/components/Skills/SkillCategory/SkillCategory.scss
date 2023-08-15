@@ -50,8 +50,9 @@
     font-size: 32px;
     z-index: 3;
     margin: 0px;
-    margin-bottom: 1vh;
+    margin-bottom: 1.8vh;
     animation: slideInDown 1.2s 0.5s backwards;
+    cursor: default;
   }
 
   .category-list {

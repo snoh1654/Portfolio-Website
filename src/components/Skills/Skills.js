@@ -10,18 +10,23 @@ const Skills = () => {
     <>
       <h1 className="skills-title">Skills</h1>
       <main className="container skills-page">
-        <section className="top-page-skills">
-          <div className="skills-paragraph-container">
-            <h3 className="skills-paragraph">
-              I am proficient in using a variety of different technical skills
-              and languages.
-            </h3>
-            <h3 className="skills-paragraph">
-              These are the technical skills that I am most confident in!
-            </h3>
-          </div>
-          <Cube></Cube>
-        </section>
+        <div className="skills-paragraph-container">
+          <h3 className="skills-paragraph">
+            I am proficient in a variety of languages and technologies from
+            building personal projects and taking Computer Science courses at
+            UBC.
+          </h3>
+          <h3 className="skills-paragraph">
+            As a lifelong learner, I am continuously learning new technical
+            skills and adopting better practiices as I develop more ambituous
+            projects and take new courses.
+          </h3>
+          <h3 className="skills-paragraph">
+            Below are the languages and technologies that I am most confident
+            in!
+          </h3>
+        </div>
+        <Cube></Cube>
 
         <section className="listed-skills">
           <div className="languages">
