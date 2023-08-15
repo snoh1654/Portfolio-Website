@@ -18,8 +18,8 @@ const Skills = () => {
           </h3>
           <h3 className="skills-paragraph">
             As a lifelong learner, I am continuously learning new technical
-            skills and adopting better practiices as I develop more ambituous
-            projects and take new courses.
+            skills and adopting better practices as I develop more ambituous
+            projects and take new academic courses.
           </h3>
           <h3 className="skills-paragraph">
             Below are the languages and technologies that I am most confident
@@ -77,7 +77,7 @@ const Skills = () => {
         </section>
       </main>
 
-      <Loader type="pacman" />
+      <Loader type="ball-grid-pulse" />
     </>
   )
 }

@@ -25,7 +25,7 @@ const About = () => {
           </section>
         </div>
       </div>
-      <Loader type="pacman"></Loader>
+      <Loader type="ball-grid-pulse"></Loader>
     </>
   )
 }
