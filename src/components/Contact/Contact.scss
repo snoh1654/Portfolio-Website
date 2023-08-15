@@ -102,6 +102,11 @@
   }
 }
 
+.contact-header-title {
+  cursor: default;
+  animation: fadeInDown 1.2s 1s backwards;
+}
+
 .contact-header-paragraph {
   font-size: 18px;
   font-family: 'Roboto';

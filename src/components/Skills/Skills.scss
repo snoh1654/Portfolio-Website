@@ -1,0 +1,41 @@
+.skills-title {
+  margin: 0px;
+  margin-left: 7.5vw;
+  margin-top: 2vh;
+
+  font-size: 58px;
+  font-family: 'sans-serif';
+  color: #ffd700;
+  font-weight: 400;
+  letter-spacing: 4px;
+  cursor: default;
+  animation: fadeInDown 1.2s 1s backwards;
+}
+
+.skills-page {
+  margin: 0;
+  margin-left: 5vw;
+  width: 95vw;
+  height: 95%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.listed-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+// .left-skills {
+//   margin-top: 5vh;
+//   height: 87.5vh;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: center;
+// }
+
+// .right-skills {
+// }

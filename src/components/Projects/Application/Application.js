@@ -38,17 +38,6 @@ const Application = ({
           />
           <h3 className="project-image-title">{imgDescription}</h3>
         </div>
-
-        {/* <img
-          className="project-image"
-          src={img2}
-          alt={'Image of ' + name + ' project'}
-        />
-        <img
-          className="project-image"
-          src={img3}
-          alt={'Image of ' + name + ' project'}
-        /> */}
       </section>
     </div>
   )

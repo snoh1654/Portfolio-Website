@@ -1,19 +1,115 @@
 .category-container {
+  height: 23vh;
+  box-sizing: border-box;
+
+  // border: 0.11em dashed white;
+  border: solid;
+  border-color: #ffd700;
+  border-width: 3px;
+  border-radius: 15px;
   margin: 0px;
-  margin-left: 20vw;
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
   width: fit-content;
   min-width: 15vw;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.75em 1em 1em;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    border: none;
+  }
+
+  &:hover::before {
+    box-sizing: content-box;
+    content: '';
+    position: absolute;
+    z-index: 0;
+    height: 16.5vh;
+    width: 200%;
+    background: linear-gradient(#00ccff, #d500f9);
+    animation: rotate 4s linear infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: #0e1538;
+    z-index: 1;
+    inset: 5px;
+    border-radius: 16px;
+  }
 
   .category-name {
+    font-size: 32px;
+    z-index: 3;
+    margin: 0px;
     margin-bottom: 1vh;
+    animation: slideInDown 1.2s 0.5s backwards;
   }
 
   .category-list {
+    z-index: 3;
     list-style: none;
     padding: 0px;
     margin: 0;
+    cursor: default;
+    animation: pulse 1.2s 1s backwards;
+    display: flex;
+    gap: 2.5vw;
+  }
+
+  .category-img-container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    .category-img {
+      box-sizing: border-box;
+      width: 5vw;
+      display: block;
+      margin: 0;
+      transition: opacity 0.3s ease 0s;
+      transition: border 0s ease-in;
+    }
+
+    .category-img-name {
+      font-size: 22px;
+      font-weight: 400;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 5vw;
+      top: 35%;
+      opacity: 0;
+      transition: opacity 0.4s ease-in;
+    }
+
+    &:hover {
+      .category-img-name {
+        opacity: 1;
+      }
+      .category-img {
+        opacity: 0.4;
+        background-color: black;
+        outline: dotted;
+        border-radius: 15px;
+        animation: heartBeat 4s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
