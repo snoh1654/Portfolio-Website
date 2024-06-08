@@ -32,13 +32,16 @@ const Contact = () => {
       <div className="container contact-page">
         <div className="text-zone">
           <h1 className="contact-header-title">Contact Me</h1>
-          <p className="contact-header-paragraph">
-            Thank you for taking the time to view my portfolio website!
-          </p>
-          <p className="contact-header-paragraph">
-            Feel free to reach out using either the form below or through my
-            contacts on the right.
-          </p>
+          <section className="contact-header-paragraph-container">
+            <p className="contact-header-paragraph">
+              Thank you for taking the time to view my portfolio website!
+            </p>
+            <p className="contact-header-paragraph">
+              Feel free to reach out using either the form below or through my
+              contacts on the right.
+            </p>
+          </section>
+
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>
               <ul>
