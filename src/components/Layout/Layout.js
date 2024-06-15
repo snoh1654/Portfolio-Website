@@ -5,8 +5,11 @@ import { Outlet } from 'react-router-dom'
 const Layout = () => {
   return (
     <>
-      <Sidebar />
-      <div className="page">
+      <div className="nav-bar">
+        <Sidebar />
+      </div>
+
+      <div className="main-content">
         {/* <span className="tags top-tags">&lt; body &gt;</span> */}
         <Outlet />
 

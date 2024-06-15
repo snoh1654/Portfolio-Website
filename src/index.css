@@ -14,9 +14,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.root {
+#root {
   height: 100vh;
   width: 100vw;
+  display: grid;
+  grid-template-columns: 0.7fr 7.15fr;
+}
+
+@media screen and (min-width: 701px) {
+  #root {
+    grid-template-columns: 1fr 19fr;
+  }
+}
+
+@media screen and (min-width: 1729px) {
+  #root {
+    display: grid;
+    grid-template-columns: 1fr 27fr;
+  }
 }
 
 html {
