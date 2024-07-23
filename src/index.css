@@ -1,6 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* outline: solid; */
+}
+
 html {
   font-size: 62.5%;
   font-family: 'Roboto';
+
+  scrollbar-width: thin;
+  scrollbar-color: lightgrey lightgrey;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 100vw;
+  border: 0.15vw solid lightgrey;
 }
 
 body {
@@ -18,33 +38,39 @@ body {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 0.7fr 7.15fr;
+  grid-template-columns: 1fr 19fr;
 }
 
-@media screen and (min-width: 701px) {
-  #root {
-    grid-template-columns: 1fr 19fr;
+@media screen and (min-width: 601px) {
+  html {
+    font-size: 12px;
   }
 }
 
-@media screen and (min-width: 1729px) {
+@media screen and (min-width: 901px) {
+  #root {
+    grid-template-columns: 1fr 10fr;
+  }
+}
+
+@media screen and (min-width: 1251px) {
+  html {
+    font-size: 15px;
+  }
+
   #root {
     display: grid;
-    grid-template-columns: 1fr 27fr;
+    grid-template-columns: 1fr 12fr;
   }
 }
 
-html {
-  scrollbar-width: thin;
-  scrollbar-color: lightgrey lightgrey;
-}
+@media screen and (min-width: 2201px) {
+  html {
+    font-size: 20px;
+  }
 
-html::-webkit-scrollbar {
-  width: 0.5vw;
-}
-
-html::-webkit-scrollbar-thumb {
-  background-color: grey;
-  border-radius: 100vw;
-  border: 0.15vw solid lightgrey;
+  #root {
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+  }
 }

@@ -15,16 +15,19 @@ const Home = () => {
             I'm
             <img src={LogoTitle} alt="developer" />
             ean
-            <br />
-            web developer
+            <br />A Software Developer
           </h1>
-          <h2>Frontend Developer / JavaScript Expert</h2>
+
+          <h2>Third Year Computer Science Major at UBC</h2>
+
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
         </div>
+
         <Logo />
       </div>
+
       <Loader type="ball-grid-pulse" />
     </>
   )

@@ -1,18 +1,16 @@
 import './UsedSkills.scss'
 
 const UsedSkills = ({ skills }) => {
-  function skillMapFunction(skill) {
+  function skillMapFunction(skill, index) {
     return (
-      <>
-        <h4 className="skill-name">{skill}</h4>
-      </>
+      <h4 key={skill + index} className="used-skill">
+        {skill}
+      </h4>
     )
   }
 
   return (
-    <div className="project-skills-container">
-      {skills.map(skillMapFunction)}
-    </div>
+    <div className="used-skills-container">{skills.map(skillMapFunction)}</div>
   )
 }
 

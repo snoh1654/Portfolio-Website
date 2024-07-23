@@ -6,10 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBook,
   faEnvelope,
-  faHandPaper,
   faHome,
   faLaptopCode,
-  faPaperclip,
   faSheetPlastic,
   faUser,
 } from '@fortawesome/free-solid-svg-icons'
@@ -17,7 +15,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
   return (
-    <>
+    <div className="nav-bar">
       <Link className="logo" to="/">
         <img src={LogoS} alt="logo" />
         <img className="sub-logo" src={LogoSubtitle} alt="logo-subtitle" />
@@ -110,7 +108,7 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
-    </>
+    </div>
   )
 }
 

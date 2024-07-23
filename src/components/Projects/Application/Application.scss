@@ -1,111 +1,116 @@
 .application-container {
-  margin: 0px;
-  margin-bottom: 15vh;
-  outline-width: 1px;
-  width: 96vw;
-  font-size: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1.5fr;
-  gap: 10px;
-  height: 35vh;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 901px) {
+    flex-direction: row;
+  }
+  justify-content: space-between;
+  gap: 1.5rem;
 
   &:hover {
-    .project-description {
-      opacity: 1;
+    .application-paragraph {
+      opacity: 1 !important;
     }
   }
 
-  .application-header {
-    margin-top: 1vw;
+  .application-description {
+    display: flex;
+    flex-direction: column;
 
-    .project-name {
-      font-family: sans-serif;
-      font-size: 42px;
-      font-weight: 600;
-      letter-spacing: 3px;
+    .application-header-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
 
-      background: linear-gradient(
-        to right,
-        #ffd700 50%,
-        #ffd700 50%,
-        #cc2e5d 100%
-      );
-      background-size: 200%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: 0.5s ease-out;
-      color: #ffd700;
-      display: inline;
-    }
+      .application-header {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 1rem;
 
-    .project-name:hover {
-      background-position: -100%;
-      cursor: default;
-    }
+        .application-name {
+          display: inline-block;
+          font-size: 2.5rem;
+          font-weight: 600;
+          letter-spacing: 0.25rem;
 
-    .github-link {
-      margin-left: 1.5em;
-      vertical-align: bottom;
+          color: #ffd700;
+          transition: 0.6s ease;
 
-      .github-link-img {
-        width: 2em;
-        border-radius: 1em;
+          &:hover {
+            // !?! Update colour theme
+            color: black;
+            transition: 0.6s ease;
+          }
+
+          cursor: default;
+        }
+
+        .github-link {
+          margin-right: 1rem;
+          align-self: center;
+
+          .github-link-img {
+            width: 2.6rem;
+            height: 100%;
+            border-radius: 100%;
+            vertical-align: middle;
+          }
+
+          .github-link-img:hover {
+            // !?! Update colour theme
+            background-color: black;
+          }
+        }
       }
+    }
 
-      .github-link-img:hover {
-        background-color: black;
-      }
+    .application-paragraph {
+      font-size: 1.35rem;
+      opacity: 0.8;
+      transition: opacity 0.1s ease-in-out;
+      animation: pulse 1s 0.6s;
     }
   }
 
-  .project-description {
-    opacity: 0.6;
-    margin-top: 0px;
-    transition: opacity 0.1s ease-in-out;
-    animation: pulse 1s 0.6s;
-  }
-
-  .application-images {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    justify-self: left;
-    align-self: center;
+  .application-image-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex: 0 0 50%;
 
-    .project-image-container {
-      width: fit-content;
+    .application-image {
+      width: 100%;
+      // max-width: 100%;
+      // max-height: 25rem;
 
-      .project-image {
-        width: 45vw;
-        object-fit: contain;
-        transition: 0.5s ease;
-        border-radius: 3px;
-        border: 2px solid black;
+      object-fit: cover;
+      transition: 0.5s ease;
+      border-radius: 1rem;
+
+      // !?! Change colour when updating color scheme
+      border: 0.15rem solid black;
+    }
+
+    .application-image-title {
+      position: absolute;
+      transition: all 0.3s ease-out;
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 5rem;
+      opacity: 0;
+    }
+
+    &:hover {
+      .application-image-title {
+        opacity: 1;
       }
 
-      .project-image-title {
-        position: absolute;
-        opacity: 0;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transition: all 0.3s ease-out;
-        text-align: center;
-        padding: 0;
-      }
-
-      &:hover {
-        .project-image-title {
-          opacity: 1;
-        }
-
-        .project-image {
-          opacity: 0.5;
-        }
+      .application-image {
+        opacity: 0.5;
       }
     }
   }

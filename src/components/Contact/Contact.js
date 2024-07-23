@@ -2,6 +2,8 @@ import { useRef } from 'react'
 import Loader from 'react-loaders'
 import './Contact.scss'
 import emailjs from '@emailjs/browser'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Contact = () => {
   const refForm = useRef()
@@ -18,11 +20,14 @@ const Contact = () => {
       )
       .then(
         () => {
-          alert('Message successfully sent!')
-          window.location.reload(false)
+          alert(
+            'Thank you for reaching out! Your message has been successfully sent. I will get back to you as soon as possible.'
+          )
         },
         () => {
-          alert('Failed to send the message, please try again.')
+          alert(
+            'We apologize, but there was an issue sending your message. Please try again later or contact me directly using my contact information listed on this page'
+          )
         }
       )
   }
@@ -30,65 +35,83 @@ const Contact = () => {
   return (
     <>
       <div className="container contact-page">
-        <div className="text-zone">
-          <h1 className="contact-header-title">Contact Me</h1>
-          <section className="contact-header-paragraph-container">
-            <p className="contact-header-paragraph">
-              Thank you for taking the time to view my portfolio website!
-            </p>
-            <p className="contact-header-paragraph">
-              Feel free to reach out using either the form below or through my
-              contacts on the right.
-            </p>
+        <h1 className="page-header">Contact</h1>
+
+        <div className="contact-body">
+          <section className="contact-form-container">
+            <div className="text-zone">
+              <p className="text">
+                Thank you for taking the time to view my portfolio website!
+              </p>
+              <p className="text">
+                Feel free to reach out using either the form below or through my
+                contacts on the right.
+              </p>
+            </div>
+
+            <form className="contact-form" ref={refForm} onSubmit={sendEmail}>
+              <input
+                className="form-input"
+                type="text"
+                name="name"
+                id="form-name"
+                placeholder="Name"
+                autoComplete="name"
+                required
+              />
+
+              <input
+                className="form-input"
+                type="email"
+                name="email"
+                id="form-email"
+                placeholder="Email"
+                autoComplete="email"
+                required
+              />
+
+              <input
+                className="form-input"
+                type="text"
+                name="subject"
+                id="form-subject"
+                placeholder="Subject"
+                required
+              />
+
+              <textarea
+                className="form-text-area"
+                name="message"
+                id="form-message"
+                placeholder="Message"
+                required
+              ></textarea>
+
+              <input className="flat-button" type="submit" value="SEND" />
+            </form>
           </section>
 
-          <div className="contact-form">
-            <form ref={refForm} onSubmit={sendEmail}>
-              <ul>
-                <li className="half">
-                  <input
-                    type="text"
-                    name="user_name"
-                    placeholder="Name"
-                    required
-                  />
-                </li>
-                <li className="half">
-                  <input
-                    type="email"
-                    name="user_email"
-                    placeholder="Email"
-                    required
-                  />
-                </li>
-                <li>
-                  <input
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                </li>
-                <li>
-                  <textarea
-                    placeholder="Message"
-                    name="message"
-                    required
-                  ></textarea>
-                </li>
-                <li>
-                  <input type="submit" className="flat-button" value="SEND" />
-                </li>
-              </ul>
-            </form>
-          </div>
+          <section className="contact-info-container">
+            <h3 className="contact-info-header">Contact Information:</h3>
+            <h4 className="contact-info">Email: seannoh1654@yahoo.ca</h4>
+            <h4 className="contact-info">Phone: (604)-441-6549</h4>
+            <h4 className="contact-info">
+              LinkedIn:
+              <a
+                className="contact-info-link"
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/sean-noh-310b3123a/"
+              >
+                <FontAwesomeIcon
+                  className="contact-info-link-icon"
+                  icon={faLinkedin}
+                  color="#4d4d4e"
+                ></FontAwesomeIcon>
+              </a>
+            </h4>
+          </section>
         </div>
-
-        <section className="contact-info-container">
-          <h2 className="contact-info-header">Contact Information:</h2>
-          <h3 className="contact-info">Email: seannoh1654@yahoo.ca</h3>
-          <h3 className="contact-info">Phone: (604)-441-6549</h3>
-        </section>
       </div>
 
       <Loader type="ball-grid-pulse" />

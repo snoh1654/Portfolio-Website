@@ -1,0 +1,61 @@
+.about-grid {
+  display: grid;
+
+  @media screen and (min-width: 1251px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    // .about-education {
+    // }
+
+    // .about-work {
+    // }
+
+    // .about-goals {
+    // }
+
+    // .about-interests {
+    // }
+  }
+
+  .about-grid-item {
+    .experience-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+
+      .experience-header {
+        display: flex;
+        flex-direction: column;
+
+        font-size: 1.5rem;
+
+        .experience-title {
+          font-weight: 400;
+          margin-bottom: 0.25rem;
+        }
+      }
+      .experience-img {
+        max-width: 35%;
+        max-height: 5.5rem;
+        // set max-height for certain viewports
+      }
+    }
+  }
+}
+
+.about-me-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+
+  .about-me-img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+  }
+}
+
+// update font styling/size for experience container
+// update alignment of image

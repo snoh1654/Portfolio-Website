@@ -1,117 +1,125 @@
-.contact-form {
-  width: 100%;
-  margin-top: 20px;
+.contact-body {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
 
-  ul {
-    padding: 0;
-    margin: 0;
+  @media screen and (min-width: 1251px) {
+    grid-template-columns: 2fr 1fr;
+  }
 
-    li {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      margin-bottom: 10px;
-      overflow: hidden;
+  .contact-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+
+    @media screen and (min-width: 901px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .form-input {
+      height: 3rem;
       display: block;
-      position: relative;
+      padding: 1.5rem;
+      background: #115173;
+      border: 0;
+      border-radius: 5px;
+
+      font-size: 1.2rem;
+      color: #fff;
+
       opacity: 0;
       animation: jackInTheBox 1s 0.5s;
       animation-fill-mode: forwards;
-      clear: both;
+
+      &#form {
+        &-subject {
+          @media screen and (min-width: 901px) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+          }
+        }
+        &-message {
+          @media screen and (min-width: 901px) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+          }
+        }
+      }
     }
 
-    li.half {
-      width: 49%;
-      margin-left: 2%;
-      float: left;
-      clear: none;
+    .form-text-area {
+      @extend .form-input;
+      min-height: 10rem;
+    }
 
-      &:first-child {
-        margin-left: 0;
+    .flat-button {
+      width: 100%;
+
+      @media screen and (min-width: 901px) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      @media screen and (min-width: 1251px) {
+        width: 50%;
+      }
+
+      background: 00;
+      padding: 0.7rem 1rem;
+
+      color: #ffd700;
+      font-size: 1.25rem;
+      letter-spacing: 3px;
+      text-decoration: none;
+
+      border: 1px solid #ffd700;
+      border-radius: 15px;
+
+      &:active {
+        background-color: black;
+      }
+
+      &:hover {
+        background-color: black;
       }
     }
   }
 
-  input[type='text'],
-  input[type='email'] {
-    width: 100%;
-    border: 0;
-    background: #115173;
-    height: 50px;
-    font-size: 16px;
-    color: #fff;
-    padding: 0 20px;
-    box-sizing: border-box;
+  .contact-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 15px;
+    background-color: green;
+    text-align: center;
+
+    animation: jackInTheBox 1s 0.5s;
+    animation-fill-mode: forwards;
+    transition: all 0.5s ease-out 0.1s;
+
+    &:hover {
+      background-color: purple;
+    }
+
+    .contact-info-header {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.2rem;
+    }
+    .contact-info {
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 0.05rem;
+
+      .contact-info-link {
+        vertical-align: middle;
+        margin-left: 0.5rem;
+
+        .contact-info-link-icon {
+          font-size: 2.5rem;
+        }
+      }
+    }
   }
-
-  textarea {
-    width: 100%;
-    border: 0;
-    background: #115173;
-    height: 50px;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px;
-    min-height: 150px;
-    box-sizing: border-box;
-  }
-
-  .flat-button {
-    color: #ffd700;
-    background: 00;
-    font: 11px;
-    letter-spacing: 3px;
-    text-decoration: none;
-    padding: 8px 10px;
-    border: 1px solid #ffd700;
-    float: right;
-    border-radius: 4px;
-  }
-}
-
-.contact-info-container {
-  width: 30vw;
-  height: 40vh;
-  margin-left: 60vw;
-  margin-top: 25vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  animation: jackInTheBox 1s 0.5s;
-  animation-fill-mode: forwards;
-  transition: all 0.5s ease-out 0.1s;
-
-  border-radius: 15px;
-  background-color: green;
-
-  .contact-info-header {
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: 4px;
-  }
-  .contact-info {
-    font-size: 26px;
-    font-weight: 500;
-    letter-spacing: 3px;
-  }
-
-  &:hover {
-    background-color: purple;
-  }
-}
-
-.contact-header-title {
-  cursor: default;
-  animation: fadeInDown 1.2s 1s backwards;
-}
-
-.contact-header-paragraph {
-  font-size: 18px;
-  font-family: 'Roboto';
-}
-
-.contact-header-paragraph-container:hover {
-  animation: pulse 5s ease;
 }

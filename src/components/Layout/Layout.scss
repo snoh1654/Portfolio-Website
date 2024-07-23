@@ -1,28 +1,9 @@
-.nav-bar {
-  width: 7.5vw;
-  min-width: 5.25rem;
-  max-width: 25rem;
+// !!!!!!!!!!!!!!
+// Deal with navbar being inner div and old "nav-bar" now being nav-bar-container
 
-  @media screen and (min-width: 701px) {
-    max-width: 8rem;
-  }
-
-  @media screen and (min-width: 1729px) {
-    max-width: 10rem;
-  }
-
-  height: 100vh;
-  background-color: #181818;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  z-index: 3;
-  grid-column: 1;
+.nav-bar-container {
+  width: 100%;
+  height: 100%;
 }
 
 .main-content {
@@ -32,49 +13,75 @@
 
 .container {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
+  padding: 1.5rem;
+  @media screen and (min-width: 601px) {
+    padding: 2rem;
+  }
 
+  opacity: 0;
   will-change: contents;
   transform-style: preserve-3d;
   animation: fadeIn 0.5s forwards;
   animation-delay: 0.5s;
+
+  .page-header {
+    display: inline-block;
+
+    font-size: 4.5rem;
+    font-weight: 600;
+    font-family: 'Roboto';
+
+    background: linear-gradient(
+      to right,
+      #ffd700 50%,
+      #ffd700 50%,
+      #cc2e5d 100%
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+    letter-spacing: 0.4rem;
+
+    &:hover {
+      background-position: -100%;
+    }
+
+    margin: 1rem 0rem;
+
+    cursor: default;
+    animation: fadeInDown 1.2s 1s backwards;
+  }
 }
 
-.about-page,
-.contact-page {
-  .text-zone {
-    width: 35%;
-    vertical-align: middle;
-    display: table-cell;
-    max-height: 90%;
+.text-zone {
+  .text-header {
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
 
-    h1 {
-      font-size: 53px;
-      font-family: 'Coolvetica';
-      color: #ffd700;
-      font-weight: 400;
-      margin-top: 0;
-      position: relative;
-      margin-bottom: 40px;
-      left: 10px;
+  .text {
+    display: block;
+    font-size: 1.35rem;
+    font-weight: 300;
+    animation: pulse 0.6s;
+    margin-top: 1rem;
+
+    &:nth-of-type(1) {
+      animation-delay: 0.6s;
     }
-    p {
-      color: #fff;
-      font-weight: 400;
-      min-width: fit-content;
-      animation: pulse 0.5s;
 
-      &:nth-of-type(1) {
-        animation-delay: 0.6s;
-      }
+    &:nth-of-type(2) {
+      animation-delay: 0.7s;
+    }
 
-      &:nth-of-type(2) {
-        animation-delay: 0.7s;
-      }
-
-      &:nth-of-type(3) {
-        animation-delay: 0.8s;
-      }
+    &:nth-of-type(3) {
+      animation-delay: 0.8s;
     }
   }
 }

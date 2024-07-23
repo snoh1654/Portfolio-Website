@@ -1,0 +1,65 @@
+!!! Bug fix with horizontal scrollbar 1, I think its fixed? Disappeared on its
+own. try using shift+scroll and refreshing with cache deletion when testing
+again in the future. ipad air is bugged, it offers half the space while
+requiring full content, dont worry about that viewport !!! Make navbar be fixed
+1, fixed but idk why the container fixes it Change margins/padding for header in
+different viewports, it looks great for desktop and ultra wide but too much
+spacing for smaller viewports, fixed but reminder if it breaks in the future
+problem with huge horizontal gap between project name header and github logo
+when header wraps (works for most resolutions, don't have long titles) 0-600:
+Mobile 601-900: Tablet 901-1250: Small monitors 1251-2200: Regular Monitors
+2201-2800: Wide monitors
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Make grid space be for button during mobile Make the navbar appear and overlap
+the content using absolute/relative positioning make contact page prettier
+(maybe add content for below form and info for > 1250px) Keep text content
+concise list logos at bottom of my contact information card? (maybe not since I
+only have linkedin, maybe twitter/instagram in the future?)
+
+<!-- Give unique font in text-container to make it stand out -->
+<!-- Different font for section header in skills -->
+<!-- Unique font for regular, page header, skills container hedaer, project header -->
+
+<!-- update skills content 1.5 -->
+<!-- update projects content 1.5 -->
+<!-- maybe update 310 image with better coloring? -->
+<!-- update project descriptions and skills used -->
+<!--  -->
+brainstorm about 0.5
+<!--  -->
+refactor about 1
+<!--  -->
+populate about with career/course/interests/goals/values information 1.5 update
+
+<!-- Get images of all projects  -->
+<!-- Resize them to same size -->
+<!-- Add them to website -->
+<!-- Doublecheck spacing -->
+<!-- Make hover over explain the image -->
+<!-- push 310 project to my github -->
+<!-- update description for main text and hover text -->
+
+colour scheme (create a variables folder) 1.5
+<!--  -->
+add important documentation 0.5
+<!--  -->
+change typography (font and fontsize and font weight) 1
+<!--  -->
+add cooler background/decorations and new logo image 2
+<!--  -->
+update aniamtions 1
+<!--  -->
+host website online 1
+
+
+<!-- make a button to open navbar for mobile 1.5 -->
+
+<!-- fix ubc course finder description -->
+<!-- make description for 210 -->
+<!-- shorten descriptions? -->
+
+Introduction
+Educational Background
+Professional Experience
+Career Goals/Values/Philosophys
+Personal Interests

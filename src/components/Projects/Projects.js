@@ -39,59 +39,50 @@ const Projects = () => {
 
   return (
     <>
-      <h1 className="projects-header page-header">Projects</h1>
-      <div className="container projects-page">
-        <Application
-          name="Library Search System"
-          description="Created a full stack application using Django that allows users to perform CRUD operations on a library’s book collection and search books by their title and author. Utilized Django Models and SQLite to store the book data utilizing a Many-To-Many relationship between Books and Authors.	Displayed the book information utilizing Django Template Language to create a dynamic website that updated the latest book information."
-          img1="website.png"
-          imgDescription="Search Website"
-          link="https://github.com/snoh1654/Library-Search-System"
-          skills={['Python', 'Django', 'SQLite']}
-        ></Application>
+      <main className="container projects-page">
+        <h1 className="page-header">Projects</h1>
 
-        <Application
-          name="Library Search System"
-          description="Created a full stack application using Django that allows users to perform CRUD operations on a library’s book collection and search books by their title and author. Utilized Django Models and SQLite to store the book data utilizing a Many-To-Many relationship between Books and Authors.	Displayed the book information utilizing Django Template Language to create a dynamic website that updated the latest book information."
-          img1="website.png"
-          imgDescription="Search Website"
-          link="https://github.com/snoh1654/Library-Search-System"
-          skills={['Python', 'Django', 'SQLite']}
-        ></Application>
+        {/* ubc course finder, 210, 310, connect four, hackathon, personal project */}
 
-        <Application
-          name="Library Search System"
-          description="Created a full stack application using Django that allows users to perform CRUD operations on a library’s book collection and search books by their title and author. Utilized Django Models and SQLite to store the book data utilizing a Many-To-Many relationship between Books and Authors.	Displayed the book information utilizing Django Template Language to create a dynamic website that updated the latest book information."
-          img1="website.png"
-          imgDescription="Search Website"
-          link="https://github.com/snoh1654/Library-Search-System"
-          skills={['Python', 'Django', 'SQLite']}
-        ></Application>
+        <section className="projects-list">
+          <Application
+            name="Multiplayer Connect4"
+            description="As part of a three-member team, I developed a real-time Multiplayer Connect Four application. We utilized Socket.IO to establish bi-directional communication between the client and server, enabling users to play simultaneously. The Connect Four game logic was implemented in JavaScript, and we used React to create a responsive website featuring stateful components that effectively managed user moves and turn swaps."
+            img1="project-images/connect-four.png"
+            imgDescription="The user is waiting for an opponent to join their room. Once another player joins, the game begins."
+            link="https://github.com/CedricPulmano/Connect-Four-Online"
+            skills={['JavaScript', 'React', 'CSS', 'SocketIO']}
+          ></Application>
 
-        <Application
-          name="example"
-          description="example description"
-          img="logo192.png"
-          link="https://github.com/"
-          skills={['JavaScript']}
-        ></Application>
+          <Application
+            name="UBC Course Finder"
+            description="I implemented a full-stack application that enables users to query zip files containing historical UBC course data using TypeScript and JSZip. I set up REST API endpoints with Express to integrate this functionality with the frontend. Following Test Driven Development, I implemented black box unit and integration tests with Mocha and Chai prior to implementation."
+            img1="project-images/310.png"
+            imgDescription="Users can upload UBC course datasets and perform detailed queries to find courses that meet specific criterias."
+            link="https://github.com/snoh1654/Course-Finder"
+            skills={['TypeScript', 'Express', 'Mocha', 'Chai', 'JSZip']}
+          ></Application>
 
-        <Application
-          name="example"
-          description="example description"
-          img="logo192.png"
-          link="https://github.com/"
-          skills={['JavaScript']}
-        ></Application>
+          <Application
+            name="Library Management System"
+            description="I built a library management system using Django that allows users to perform CRUD operations on books and search by title and author. I leveraged Django's models to handle a Many-to-Many relationship between books and authors and utilized Django's Template Language to dynamically display updated book information."
+            img1="/project-images/library.png"
+            imgDescription="The frontend for the library system. Easily search and display book information by title or author name."
+            link="https://github.com/snoh1654/Library-Search-System"
+            skills={['Python', 'Django']}
+          ></Application>
 
-        <Application
-          name="example"
-          description="example description"
-          img="logo192.png"
-          link="https://github.com/"
-          skills={['JavaScript']}
-        ></Application>
-      </div>
+          <Application
+            name="LoL Champ Recorder"
+            description="I created a Java application that allows users to record champion information in League of Legends. The application features both a console-based interface and a GUI designed with Swing, supporting CRUD operations along with saving and loading mechanics using JSON files to persist inputted information. To ensure robustness and identify program vulnerabilities, I structured modular unit tests using JUnit."
+            img1="project-images/210.png"
+            imgDescription="The GUI of the application. You can perform CRUD operations and the program supports data persistence."
+            link="https://github.com/snoh1654/Character-Interaction-Recorder"
+            skills={['Java', 'Java Swing', 'JUnit']}
+          ></Application>
+        </section>
+      </main>
+
       <Loader type="ball-grid-pulse" />
     </>
   )

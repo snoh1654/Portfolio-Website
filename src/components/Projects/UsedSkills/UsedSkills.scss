@@ -1,20 +1,28 @@
 $initial-color: #ffd700;
 $after-color: #022c43;
 
-.skill-name {
-  color: $after-color;
-  background-color: $initial-color;
-  width: fit-content;
-  padding: 0.2em;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background-color 0.5s ease-out 100ms;
-  margin: 2px;
-  display: inline-block;
+.used-skills-container {
+  display: flex;
+  gap: 0.3rem;
 
-  &:hover {
-    color: $initial-color;
-    background-color: $after-color;
-    cursor: default;
+  .used-skill {
+    display: inline-block;
+    width: max-content;
+    background-color: $initial-color;
+    border-radius: 10px;
+
+    font-size: 1.15rem;
+    color: $after-color;
+
+    margin: 0px;
+    padding: 0.3rem 0.5rem;
+
+    transition: background-color 0.5s ease-out 100ms;
+
+    &:hover {
+      color: $initial-color;
+      background-color: $after-color;
+      cursor: default;
+    }
   }
 }

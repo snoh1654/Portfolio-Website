@@ -1,9 +1,9 @@
 import './SkillCategory.scss'
 
 const SkillCategory = ({ categoryName, skills }) => {
-  function createCategoryItems(skill) {
+  function createCategoryItems(skill, index) {
     return (
-      <li className="category-item">
+      <li className="category-item" key={index}>
         <section className="category-img-container">
           <img
             className="category-img"

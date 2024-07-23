@@ -1,78 +1,64 @@
 .home-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  align-items: center;
+
   .text-zone {
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40%;
-    max-height: 90%;
-  }
-  h1 {
-    color: white;
-    font-size: 53px;
-    margin: 0;
-    font-family: 'Roboto';
-    font-weight: 400;
+    h1 {
+      color: white;
+      font-size: 4.5rem;
+      margin: 0;
+      font-family: 'Roboto';
+      font-weight: 400;
 
-    &::before {
-      content: '<h1>';
-      font-family: 'La Bell Aurore';
-      color: #ffd700;
-      font-size: 18px;
-      position: absolute;
-      margin-top: -40px;
-      left: 15px;
-      opacity: 0.6;
+      img {
+        width: 3.5rem;
+        height: auto;
+
+        margin-left: 1.5rem;
+        animation: rotateIn 1s linear 1s both;
+      }
     }
 
-    &::after {
-      content: '<h1/>';
-      color: #ffd700;
-      font-family: 'La Bell Aurore';
-      color: #ffd700;
-      font-size: 18px;
-      position: absolute;
-      margin-top: 18px;
-      margin-left: 20px;
-      animation: fadeIn 1s 1.7sd backwards;
-      opacity: 0.6;
+    h2 {
+      color: #8d8d8d;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 300;
+      font-size: 1rem;
+      font-family: sans-serif;
+      letter-spacing: 0.3rem;
+      animation: fadeIn 1s 1.8s backwards;
     }
-
-    img {
-      width: 32px;
-      margin-left: 20px;
-      opacity: 0;
-      height: auto;
-      animation: rotateIn 1s linear both;
-      animation-delay: 1.4s;
-    }
-  }
-
-  h2 {
-    color: #8d8d8d;
-    margin-top: 20px;
-    font-weight: 400;
-    font-size: 11px;
-    font-family: sans-serif;
-    letter-spacing: 3px;
-    animation: fadeIn 1s 1.8s backwards;
   }
 }
 
+// !!! Then, deal with Logo component, find a better logo?, learn how to attribute logo
+
 .flat-button {
-  color: #ffd700;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 4px;
-  font-family: sans-serif;
-  text-decoration: none;
-  padding: 10px 18px;
+  display: block;
+  padding: 1rem 0rem;
+  width: 50%;
+  text-align: center;
+
+  @media screen and (min-width: 701px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   border: 1px solid #ffd700;
-  margin-top: 25px;
-  float: left;
   animation: fadeIn 1s 1.3s backwards;
   white-space: nowrap;
   cursor: pointer;
+
+  color: #ffd700;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  font-family: sans-serif;
+  text-decoration: none;
 
   &:hover {
     background: #ffd700;

@@ -8,72 +8,73 @@ import Loader from 'react-loaders'
 const Skills = () => {
   return (
     <>
-      <h1 className="skills-title">Skills</h1>
       <main className="container skills-page">
-        <div className="skills-paragraph-container">
-          <h3 className="skills-paragraph">
-            I am proficient in a variety of languages and technologies from
-            building personal projects and taking Computer Science courses at
-            UBC.
-          </h3>
-          <h3 className="skills-paragraph">
-            As a lifelong learner, I am continuously learning new technical
-            skills and adopting better practices as I develop more ambituous
-            projects and take new academic courses.
-          </h3>
-          <h3 className="skills-paragraph">
-            Below are the languages and technologies that I am most confident
-            in!
-          </h3>
+        <h1 className="page-header">Skills</h1>
+
+        <div className="text-zone">
+          <p className="text">
+            As a third-year Computer Science major at the University of British
+            Columbia with one year of professional experience, I have a solid
+            foundation in a diverse range of programming languages and
+            technologies.
+          </p>
+          <p className="text">
+            From my personal projects, academic courses, and hands-on work
+            experience I learned a variety of technical skills and more
+            importantly, the ability to quickly learn new technologies.
+          </p>
+          <p className="text">
+            I am committed to continuous learning and staying updated with
+            industry advancements to ensure that my technical skills remain
+            modern and relevant. Below are the languages and technologies that I
+            am most proficient at:
+          </p>
         </div>
-        <Cube></Cube>
+
+        {/* TODO: Decide what to do with the cube */}
+        {/* <Cube></Cube> */}
 
         <section className="listed-skills">
-          <div className="languages">
-            <SkillCategory
-              categoryName="Coding Languages"
-              skills={[
-                { name: 'Java', imgLocation: 'java-icon.svg' },
-                { name: 'Python', imgLocation: 'python-icon.svg' },
-                { name: 'TypeScript', imgLocation: 'typescriptlang-icon.svg' },
-                // { name: 'C', imgLocation: 'c-1.svg' },
-                { name: 'C++', imgLocation: 'c++.svg' },
-              ]}
-            ></SkillCategory>
-          </div>
-          <div className="web">
-            <SkillCategory
-              categoryName="Web Development"
-              skills={[
-                { name: 'HTML', imgLocation: 'w3_html5-icon.svg' },
-                { name: 'CSS', imgLocation: 'w3_css-icon.svg' },
-                { name: 'JavaScript', imgLocation: 'js-logo.svg' },
-                { name: 'SASS', imgLocation: 'sass-lang-icon.svg' },
-              ]}
-            ></SkillCategory>
-          </div>
-          <div className="libframe">
-            <SkillCategory
-              categoryName="Libraries/Frameworks"
-              skills={[
-                { name: 'React', imgLocation: 'reactjs-icon.svg' },
-                { name: 'Node', imgLocation: 'nodejs-icon.svg' },
-                { name: 'Socket.IO', imgLocation: 'socketio-icon.svg' },
-                { name: 'Django', imgLocation: 'djangoproject-icon.svg' },
-              ]}
-            ></SkillCategory>
-          </div>
-          <div className="technologies">
-            <SkillCategory
-              categoryName="Technologies"
-              skills={[
-                { name: 'Git', imgLocation: 'git-scm-icon.svg' },
-                { name: 'JSON', imgLocation: 'json-icon.svg' },
-                { name: 'Figma', imgLocation: 'figma-icon.svg' },
-                { name: 'Jira', imgLocation: 'atlassian_jira-icon.svg' },
-              ]}
-            ></SkillCategory>
-          </div>
+          <SkillCategory
+            categoryName="Coding Languages"
+            skills={[
+              { name: 'Python', imgLocation: 'python-icon.svg' },
+              { name: 'Java', imgLocation: 'java-icon.svg' },
+              { name: 'JavaScript', imgLocation: 'js-logo.svg' },
+              { name: 'TypeScript', imgLocation: 'typescriptlang-icon.svg' },
+              // { name: 'C++', imgLocation: 'c++.svg' },
+              // { name: 'C', imgLocation: 'c-1.svg' },
+              // !!! different logo sizes are causing resizing issues. Resizing issue also occurs in mobile, find issue of this bug
+            ]}
+          ></SkillCategory>
+          <SkillCategory
+            categoryName="Web Development"
+            skills={[
+              { name: 'HTML', imgLocation: 'w3_html5-icon.svg' },
+              { name: 'CSS', imgLocation: 'w3_css-icon.svg' },
+              { name: 'JQuery', imgLocation: 'jquery.svg' },
+              { name: 'Bootstrap', imgLocation: 'bootstrap-logo.svg' },
+              { name: 'SASS', imgLocation: 'sass-lang-icon.svg' },
+            ]}
+          ></SkillCategory>
+          <SkillCategory
+            categoryName="Libraries/Frameworks"
+            skills={[
+              { name: 'Django', imgLocation: 'djangoproject-icon.svg' },
+              { name: 'Selenium', imgLocation: 'selenium.svg' },
+              { name: 'React', imgLocation: 'reactjs-icon.svg' },
+              { name: 'Node', imgLocation: 'nodejs-icon.svg' },
+            ]}
+          ></SkillCategory>
+          <SkillCategory
+            categoryName="Technologies"
+            skills={[
+              { name: 'Git', imgLocation: 'git-scm-icon.svg' },
+              // { name: 'JSON', imgLocation: 'json-icon.svg' },
+              { name: 'Unix Shell', imgLocation: 'bash.svg' },
+              { name: 'Jira', imgLocation: 'atlassian_jira-icon.svg' },
+            ]}
+          ></SkillCategory>
         </section>
       </main>
 

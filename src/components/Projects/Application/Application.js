@@ -11,33 +11,33 @@ const Application = ({
 }) => {
   return (
     <div className="application-container">
-      <section className="application-header">
-        <h2 className="project-name">{name}</h2>
+      <section className="application-description">
+        <div className="application-header-container">
+          <div className="application-header">
+            <span className="application-name">{name}</span>
 
-        <a href={link} className="github-link" target="_blank">
-          <img
-            src="github-mark-white.png"
-            alt={'Link to ' + { name } + "'s github"}
-            className="github-link-img"
-          />
-        </a>
+            <a href={link} className="github-link" target="_blank">
+              <img
+                src="github-mark-white.png"
+                alt={'Link to ' + { name } + "'s github"}
+                className="github-link-img"
+              />
+            </a>
+          </div>
 
-        <section className="application-skills">
           <UsedSkills skills={skills}></UsedSkills>
-        </section>
+        </div>
+
+        <p className="application-paragraph">{description}</p>
       </section>
 
-      <p className="project-description">{description}</p>
-
-      <section className="application-images">
-        <div className="project-image-container">
-          <img
-            className="project-image"
-            src={img1}
-            alt={'Image of ' + name + ' project'}
-          />
-          <h3 className="project-image-title">{imgDescription}</h3>
-        </div>
+      <section className="application-image-container">
+        <img
+          className="application-image"
+          src={img1}
+          alt={'Image of ' + name + ' application'}
+        />
+        <h3 className="application-image-title">{imgDescription}</h3>
       </section>
     </div>
   )
