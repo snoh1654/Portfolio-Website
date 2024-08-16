@@ -1,61 +1,161 @@
-.about-grid {
-  display: grid;
+@import '../../utilities/_variables.scss';
 
-  @media screen and (min-width: 1251px) {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    // .about-education {
-    // }
+// .about-grid {
+//   display: grid;
 
-    // .about-work {
-    // }
+//   @media screen and (min-width: 1251px) {
+//     grid-template-columns: 1fr 1fr;
+//     gap: 2rem;
+//     // .about-education {
+//     // }
 
-    // .about-goals {
-    // }
+//     // .about-work {
+//     // }
 
-    // .about-interests {
-    // }
+//     // .about-goals {
+//     // }
+
+//     // .about-interests {
+//     // }
+//   }
+
+//   .about-grid-item {
+//     .experience-container {
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+//       flex-wrap: nowrap;
+
+//       .experience-header {
+//         display: flex;
+//         flex-direction: column;
+
+//         font-size: 1.5rem;
+
+//         .experience-title {
+//           font-weight: 400;
+//           margin-bottom: 0.25rem;
+//         }
+//       }
+//       .experience-img {
+//         max-width: 35%;
+//         max-height: 5.5rem;
+//         // set max-height for certain viewports
+//       }
+//     }
+//   }
+// }
+
+// .about-me-container {
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   gap: 3rem;
+// }
+
+.about-page {
+  width: 100%;
+  @media screen and (min-width: 901px) {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
-  .about-grid-item {
-    .experience-container {
-      display: flex;
-      align-items: center;
+  .about-section {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    &.last {
+      margin-bottom: 1.5rem;
+    }
+
+    @media screen and (min-width: 901px) {
+      margin-bottom: 5rem;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    @media screen and (min-width: 901px) {
+      flex-direction: row;
       justify-content: space-between;
-      flex-wrap: nowrap;
+      gap: 5rem;
+    }
 
-      .experience-header {
-        display: flex;
-        flex-direction: column;
+    .about-section-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
 
-        font-size: 1.5rem;
+      @media screen and (max-width: 900px) {
+        order: 1;
+      }
 
-        .experience-title {
-          font-weight: 400;
-          margin-bottom: 0.25rem;
+      .about-img {
+        display: block;
+        max-width: 70%;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: 601px) {
+          max-width: 50%;
+        }
+
+        @media screen and (min-width: 901px) {
+          max-width: 100%;
+        }
+
+        @media screen and (min-width: 1251px) {
+          max-width: 80%;
         }
       }
-      .experience-img {
-        max-width: 35%;
-        max-height: 5.5rem;
-        // set max-height for certain viewports
+    }
+
+    .about-section-text-left {
+      flex: 2;
+    }
+
+    .about-section-text-right {
+      flex: 1.5;
+
+      @media screen and (min-width: 901px) {
+        margin-left: 3.5rem;
+      }
+    }
+
+    .experience-header {
+      margin-bottom: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .experience-title,
+      .experience-date {
+        font-size: 1.5rem;
+        font-weight: $text-header-weight;
+      }
+    }
+
+    .experience-paragraph {
+      margin-bottom: 1rem;
+
+      .experience-skills {
+        display: block;
+        margin-bottom: 0.3rem;
+
+        font-weight: $text-header-weight;
       }
     }
   }
-}
 
-.about-me-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
+  .skills-section {
+    margin-bottom: 3rem;
 
-  .about-me-img {
-    width: 50%;
-    height: 50%;
-    border-radius: 50%;
+    @media screen and (min-width: 901px) {
+      margin-bottom: 5rem;
+    }
   }
 }
-
-// update font styling/size for experience container
-// update alignment of image
