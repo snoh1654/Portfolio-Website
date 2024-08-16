@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website repository! This application showcases my work, projects, and skills.
 
-You can view my website at:
+You can view my website at: URL
 
 ## Features
 
@@ -24,6 +24,9 @@ You can view my website at:
 ## Screenshots
 
 Here are some screenshots of the portfolio website:
+![Home Page](./public/home-page.PNG)
+![About Page](./public/about-page.PNG)
+![Projects Page](./public/projects-page.PNG)
 
 ## Contact
 
@@ -31,3 +34,5 @@ Feel free to reach out to me via email or through the contact form on the websit
 
 - Email: seannoh1654@yahoo.ca
 - [LinkedIn](https://www.linkedin.com/in/sean-noh-310b3123a/)
+
+<!-- <a href="https://www.freepik.com/free-vector/creative-geometric-design-space_4159942.htm#fromView=keyword&page=2&position=2&uuid=4c2f2150-0746-4c87-84be-f2382e589094">Image by rawpixel.com on Freepik</a> -->
