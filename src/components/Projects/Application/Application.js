@@ -18,7 +18,7 @@ const Application = ({
 
             <a href={link} className="github-link" target="_blank">
               <img
-                src="github-mark-white.png"
+                src="github.svg"
                 alt={'Link to ' + { name } + "'s github"}
                 className="github-link-img"
               />
@@ -28,7 +28,9 @@ const Application = ({
           <UsedSkills skills={skills}></UsedSkills>
         </div>
 
-        <p className="application-paragraph">{description}</p>
+        <div className="text-zone">
+          <p className="application-paragraph text">{description}</p>
+        </div>
       </section>
 
       <section className="application-image-container">

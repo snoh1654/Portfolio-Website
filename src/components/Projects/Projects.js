@@ -42,8 +42,6 @@ const Projects = () => {
       <main className="container projects-page">
         <h1 className="page-header">Projects</h1>
 
-        {/* ubc course finder, 210, 310, connect four, hackathon, personal project */}
-
         <section className="projects-list">
           <Application
             name="Multiplayer Connect4"

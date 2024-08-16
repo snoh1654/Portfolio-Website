@@ -1,3 +1,5 @@
+@import '../../../utilities/_variables.scss';
+
 .application-container {
   display: flex;
   flex-direction: column;
@@ -31,17 +33,15 @@
 
         .application-name {
           display: inline-block;
-          font-size: 2.5rem;
-          font-weight: 600;
+          font-size: 3rem;
+          font-weight: $text-header-weight;
           letter-spacing: 0.25rem;
 
-          color: #ffd700;
-          transition: 0.6s ease;
+          color: $text-header-color;
+          transition: 0.2s ease-out;
 
           &:hover {
-            // !?! Update colour theme
-            color: black;
-            transition: 0.6s ease;
+            color: $text-header-hover-color;
           }
 
           cursor: default;
@@ -56,21 +56,22 @@
             height: 100%;
             border-radius: 100%;
             vertical-align: middle;
-          }
+            background-color: $white;
+            transition: 0.3s ease-out;
 
-          .github-link-img:hover {
-            // !?! Update colour theme
-            background-color: black;
+            &:hover {
+              background-color: $github-logo-active-color;
+            }
           }
         }
       }
     }
 
     .application-paragraph {
-      font-size: 1.35rem;
-      opacity: 0.8;
+      margin: 0;
+      // opacity: 0.8;
       transition: opacity 0.1s ease-in-out;
-      animation: pulse 1s 0.6s;
+      animation: pulse 1.2s 0.6s;
     }
   }
 
@@ -81,6 +82,9 @@
     align-items: center;
     align-self: center;
     flex: 0 0 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    border: 0.15rem solid $project-image-border-color;
 
     .application-image {
       width: 100%;
@@ -92,16 +96,21 @@
       border-radius: 1rem;
 
       // !?! Change colour when updating color scheme
-      border: 0.15rem solid black;
+
+      animation: pulse 1.2s 0.6s;
     }
 
     .application-image-title {
       position: absolute;
-      transition: all 0.3s ease-out;
-      text-align: center;
-      font-size: 1.5rem;
       padding: 5rem;
+      text-align: center;
+
+      font-size: 1.6rem;
+      font-weight: $text-hover-weight;
+      color: $image-overlay-text-color;
+
       opacity: 0;
+      transition: all 0.3s ease-out;
     }
 
     &:hover {
@@ -110,7 +119,7 @@
       }
 
       .application-image {
-        opacity: 0.5;
+        opacity: 0.3;
       }
     }
   }
