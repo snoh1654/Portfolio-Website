@@ -32,16 +32,6 @@
         font-weight: $text-weight;
         margin: 0;
         text-wrap: wrap;
-
-        // .text-image {
-        //   width: 3.5rem;
-        //   height: auto;
-
-        //   margin-left: 0.5rem;
-        //   vertical-align: baseline;
-
-        //   animation: rotateIn 0.6s linear 0.5s both;
-        // }
       }
 
       .home-text-sub-header {
@@ -122,15 +112,4 @@
       margin: auto;
     }
   }
-}
-
-// !!! Then, deal with Logo component, find a better logo?, learn how to attribute logo
-
-.wave {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  width: 100%;
-  background-size: cover;
-  // max-height: 25%;
 }

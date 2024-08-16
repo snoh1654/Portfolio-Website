@@ -1,7 +1,6 @@
 import './About.scss'
 import { Loader } from 'react-loaders'
 import UsedSkills from '../Projects/UsedSkills/UsedSkills'
-import SkillCategory from '../Skills/SkillCategory/SkillCategory'
 
 const About = () => {
   return (

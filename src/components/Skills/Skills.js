@@ -2,8 +2,6 @@ import './Skills.scss'
 import SkillCategory from './SkillCategory/SkillCategory'
 import Loader from 'react-loaders'
 
-// rotating cube + category image list OR combine with about
-
 const Skills = () => {
   return (
     <>
@@ -11,12 +9,6 @@ const Skills = () => {
         <h1 className="page-header">Skills</h1>
 
         <div className="text-zone">
-          {/* <p className="text">
-            As a third-year Computer Science major at the University of British
-            Columbia with one year of professional experience, I have a solid
-            foundation in a diverse range of programming languages and
-            technologies.
-          </p> */}
           <p className="text">
             From my personal projects, academic courses, and hands-on work
             experience, I have a solid foundation in a diverse range of
@@ -39,9 +31,6 @@ const Skills = () => {
               { name: 'Java', imgLocation: 'java-icon.svg' },
               { name: 'JavaScript', imgLocation: 'js-logo.svg' },
               { name: 'TypeScript', imgLocation: 'typescriptlang-icon.svg' },
-              // { name: 'C++', imgLocation: 'c++.svg' },
-              // { name: 'C', imgLocation: 'c-1.svg' },
-              // !!! different logo sizes are causing resizing issues. Resizing issue also occurs in mobile, find issue of this bug
             ]}
           ></SkillCategory>
           <SkillCategory

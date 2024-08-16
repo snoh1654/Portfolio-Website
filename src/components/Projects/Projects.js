@@ -2,41 +2,7 @@ import './Projects.scss'
 import Loader from 'react-loaders'
 import Application from './Application/Application'
 
-// import { useReducer } from 'react'
-
-// Make like netflix wheel?
-
-// const ACTIONS = {
-//   NEXT: 'next',
-//   PREVIOUS: 'previous',
-// }
-
-// function reducer(state, action) {
-//   let projectsArray = state.projects
-
-//   switch (action.type) {
-//     case ACTIONS.NEXT:
-//       if (isInBound(1, state.index, projectsArray.length)) {
-//       }
-//     case ACTIONS.PREVIOUS:
-//       if (isInBound(-1, state.index, projectsArray.length)) {
-//       }
-//     default:
-//       return state
-//   }
-// }
-
-// function isInBound(direction, index, length) {
-//   if (index + direction == length || index - direction < 0) {
-//     return true
-//   } else {
-//     return false
-//   }
-// }
-
 const Projects = () => {
-  // const [state, dispatch] = useReducer(reducer, { projects: [], index: 0 })
-
   return (
     <>
       <main className="container projects-page">

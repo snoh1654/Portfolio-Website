@@ -2,19 +2,8 @@ import './Sidebar.scss'
 import { Link, NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faBook,
-  faSquareEnvelope,
-  faEnvelopesBulk,
   faEnvelopeOpenText,
-  faEnvelopeOpen,
-  faList,
-  faListSquares,
-  faListAlt,
-  faListDots,
-  faRightToBracket,
-  faListCheck,
   faCode,
-  faGear,
   faHouseChimneyWindow,
   faLaptopCode,
   faSheetPlastic,
@@ -27,7 +16,6 @@ const Sidebar = () => {
     <div className="nav-bar">
       <Link className="logo" to="/">
         <img src="s-logo.png" alt="logo-s" />
-        {/* <img className="sub-logo" src={LogoSubtitle} alt="logo-subtitle" /> */}
       </Link>
 
       <nav className="main-nav">
