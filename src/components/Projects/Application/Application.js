@@ -25,7 +25,7 @@ const Application = ({
               <img
                 src="github.svg"
                 alt={'Link to ' + { name } + "'s github"}
-                className="github-logo"
+                className="github-link-img"
               />
             </a>
           </div>
