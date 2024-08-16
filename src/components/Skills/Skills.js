@@ -1,6 +1,5 @@
 import './Skills.scss'
 import SkillCategory from './SkillCategory/SkillCategory'
-import Cube from './Cube/Cube'
 import Loader from 'react-loaders'
 
 // rotating cube + category image list OR combine with about
@@ -12,16 +11,17 @@ const Skills = () => {
         <h1 className="page-header">Skills</h1>
 
         <div className="text-zone">
-          <p className="text">
+          {/* <p className="text">
             As a third-year Computer Science major at the University of British
             Columbia with one year of professional experience, I have a solid
             foundation in a diverse range of programming languages and
             technologies.
-          </p>
+          </p> */}
           <p className="text">
             From my personal projects, academic courses, and hands-on work
-            experience I learned a variety of technical skills and more
-            importantly, the ability to quickly learn new technologies.
+            experience, I have a solid foundation in a diverse range of
+            programming languages and technologies and more importantly, the
+            ability to quickly learn new technologies.
           </p>
           <p className="text">
             I am committed to continuous learning and staying updated with
@@ -30,9 +30,6 @@ const Skills = () => {
             am most proficient at:
           </p>
         </div>
-
-        {/* TODO: Decide what to do with the cube */}
-        {/* <Cube></Cube> */}
 
         <section className="listed-skills">
           <SkillCategory

@@ -1,12 +1,12 @@
-.skills-page {
-  .listed-skills {
-    margin-top: 2.5rem;
-    display: grid;
+@import '../../utilities/_variables.scss';
 
-    @media screen and (min-width: 901px) {
-      grid-template-columns: 1fr 1fr;
-    }
-    justify-items: center;
-    gap: 2rem;
+.listed-skills {
+  margin-top: 2.5rem;
+  display: grid;
+
+  @media screen and (min-width: 901px) {
+    grid-template-columns: 1fr 1fr;
   }
+  justify-items: center;
+  gap: 2rem;
 }
