@@ -1,0 +1,138 @@
+@import '../../utilities/_variables.scss';
+
+.nav-bar-container {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  width: 100%;
+  height: 100%;
+
+  background: $background-color;
+  color: $text-color;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  padding: 1.5rem;
+  @media screen and (min-width: 601px) {
+    padding: 3.5rem;
+  }
+
+  opacity: 0;
+  will-change: contents;
+  transform-style: preserve-3d;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 0.5s;
+
+  .page-header {
+    display: inline-block;
+
+    font-size: 4.5rem;
+    font-weight: $page-header-weight;
+    font-family: $header-font;
+
+    background: linear-gradient(
+      to right,
+      $page-header-color-1 50%,
+      $page-header-color-2 50%,
+      $page-header-color-3 100%
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+    letter-spacing: 0.25rem;
+
+    &:hover {
+      background-position: -100%;
+    }
+
+    margin: 1rem 0rem;
+
+    cursor: default;
+    animation: fadeInDown 1.2s 1s backwards;
+  }
+
+  .flat-button {
+    display: block;
+    padding: 1rem 0rem;
+    width: 50%;
+    text-align: center;
+
+    @media screen and (min-width: 601px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    border: 1px solid $button-border-color;
+    animation: fadeIn 1s 1.3s backwards;
+    white-space: nowrap;
+    cursor: pointer;
+
+    background-color: $button-background-color;
+    color: $button-text-color;
+    font-weight: $text-header-weight;
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    text-decoration: none;
+
+    &:hover {
+      background: $button-background-hover-color;
+      color: $button-text-hover-color;
+    }
+  }
+}
+
+.text-zone {
+  font-family: $default-font;
+  font-size: $text-size;
+  font-weight: $text-weight;
+  color: $text-color;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .text-header {
+    display: inline-block;
+
+    color: $text-header-color;
+    font-family: $default-font;
+    font-size: 2.5rem;
+    font-weight: $text-header-weight;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    transition: color 0.2s ease-out 100ms;
+    animation: pulse 0.6s 0.5s;
+
+    &:hover {
+      color: $text-header-hover-color;
+    }
+  }
+
+  .text {
+    display: block;
+
+    animation: pulse 0.6s;
+    @for $i from 1 through 3 {
+      &:nth-of-type(#{$i}) {
+        animation-delay: 0.5s + 0.1s * $i;
+      }
+    }
+  }
+
+  .text-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 1.5rem;
+
+    animation: pulse 0.6s;
+    animation-delay: 0.8s;
+  }
+}
