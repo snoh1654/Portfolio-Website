@@ -1,5 +1,7 @@
+@import '../../utilities/_variables.scss';
+
 .nav-bar {
-  background-color: #181818;
+  background-color: $navbar-color;
   width: 100%;
   height: 100vh;
   min-width: 5.25rem;
@@ -41,7 +43,7 @@
     img {
       display: block;
       margin: auto;
-      width: 75%;
+      width: 100%;
       height: auto;
 
       &.sub-logo {
@@ -61,12 +63,15 @@
 
     a {
       font-size: 2rem;
-      color: #4d4d4e;
       display: block;
       position: relative;
       text-decoration: none;
       line-height: 5rem;
       height: 5rem;
+
+      svg {
+        color: $navbar-default-color;
+      }
 
       @media screen and (min-width: 901px) {
         line-height: 4.5rem;
@@ -84,7 +89,7 @@
       }
 
       &:hover {
-        color: #ffd700;
+        color: $navbar-active-color;
 
         svg {
           opacity: 0 !important;
@@ -92,6 +97,13 @@
 
         &:after {
           opacity: 1 !important;
+        }
+      }
+
+      &.active {
+        svg {
+          color: $navbar-active-color;
+          opacity: 0.75;
         }
       }
 
@@ -105,22 +117,13 @@
         letter-spacing: 1px;
         bottom: 0;
         opacity: 0;
-        transition: all 0.3s ease-out;
+        transition: all ease-out;
 
-        @media screen and (min-width: 701px) {
+        @media screen and (min-width: 601px) {
           font-size: 0.8rem;
         }
-        @media screen and (min-width: 1025px) {
+        @media screen and (min-width: 1251px) {
           font-size: 0.85rem;
-        }
-      }
-
-      &.active {
-        color: #ffd700;
-
-        svg {
-          color: #ffd700;
-          opacity: 0.75;
         }
       }
     }
@@ -172,6 +175,14 @@
         line-height: 2rem;
         padding: 0.75rem 0;
 
+        svg {
+          color: $navbar-default-color;
+        }
+
+        &:hover svg {
+          color: $navbar-active-color;
+        }
+
         @media screen and (min-width: 901px) {
           font-size: 1.5rem;
           padding: 0.5rem 0;
@@ -180,10 +191,6 @@
         @media screen and (min-width: 2201px) {
           padding: 0.4rem 0;
         }
-      }
-
-      &:hover svg {
-        color: #ffd700;
       }
     }
   }

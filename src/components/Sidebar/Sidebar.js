@@ -1,15 +1,24 @@
 import './Sidebar.scss'
 import { Link, NavLink } from 'react-router-dom'
-import LogoS from '../../assets/images/logo-s.png'
-import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBook,
-  faEnvelope,
-  faHome,
+  faSquareEnvelope,
+  faEnvelopesBulk,
+  faEnvelopeOpenText,
+  faEnvelopeOpen,
+  faList,
+  faListSquares,
+  faListAlt,
+  faListDots,
+  faRightToBracket,
+  faListCheck,
+  faCode,
+  faGear,
+  faHouseChimneyWindow,
   faLaptopCode,
   faSheetPlastic,
-  faUser,
+  faUserCircle,
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
@@ -17,8 +26,8 @@ const Sidebar = () => {
   return (
     <div className="nav-bar">
       <Link className="logo" to="/">
-        <img src={LogoS} alt="logo" />
-        <img className="sub-logo" src={LogoSubtitle} alt="logo-subtitle" />
+        <img src="s-logo.png" alt="logo-s" />
+        {/* <img className="sub-logo" src={LogoSubtitle} alt="logo-subtitle" /> */}
       </Link>
 
       <nav className="main-nav">
@@ -28,7 +37,10 @@ const Sidebar = () => {
           className="home-link"
           to="/"
         >
-          <FontAwesomeIcon icon={faHome} color="#4d4d4e"></FontAwesomeIcon>
+          <FontAwesomeIcon
+            icon={faHouseChimneyWindow}
+            color="#4d4d4e"
+          ></FontAwesomeIcon>
         </NavLink>
 
         <NavLink
@@ -37,7 +49,10 @@ const Sidebar = () => {
           className="about-link"
           to="/about"
         >
-          <FontAwesomeIcon icon={faUser} color="#4d4d4e"></FontAwesomeIcon>
+          <FontAwesomeIcon
+            icon={faUserCircle}
+            color="#4d4d4e"
+          ></FontAwesomeIcon>
         </NavLink>
 
         <NavLink
@@ -46,7 +61,7 @@ const Sidebar = () => {
           className="skills-link"
           to="/skills"
         >
-          <FontAwesomeIcon icon={faBook} color="#4d4d4e"></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faCode} color="#4d4d4e"></FontAwesomeIcon>
         </NavLink>
 
         <NavLink
@@ -67,7 +82,10 @@ const Sidebar = () => {
           className="contact-link"
           to="/contact"
         >
-          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e"></FontAwesomeIcon>
+          <FontAwesomeIcon
+            icon={faEnvelopeOpenText}
+            color="#4d4d4e"
+          ></FontAwesomeIcon>
         </NavLink>
       </nav>
 
