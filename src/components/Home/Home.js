@@ -1,31 +1,122 @@
-import LogoTitle from '../../assets/images/logo-s.png'
 import { Link } from 'react-router-dom'
 import './Home.scss'
-import Logo from '../Logo/Logo'
 import Loader from 'react-loaders'
+import { useEffect, useCallback } from 'react'
+
+const throttle = (func, limit) => {
+  let inThrottle = false
+  return function () {
+    const args = arguments
+    const context = this
+    if (!inThrottle) {
+      func.apply(context, args)
+      inThrottle = true
+      setTimeout(() => (inThrottle = false), limit)
+    }
+  }
+}
 
 const Home = () => {
+  const parallax = useCallback(
+    throttle((e) => {
+      const objects = document.querySelectorAll('.object')
+      objects.forEach((move) => {
+        const movingValue = move.getAttribute('data-value')
+        const x = (e.clientX * movingValue) / 225
+        const y = (e.clientY * movingValue) / 225
+
+        move.style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)'
+
+        console.log('translateX(' + x + 'px) translateY(' + y + 'px);')
+      })
+    }, 20),
+    []
+  )
+
+  useEffect(() => {
+    const homeElement = document.getElementById('home')
+    homeElement.addEventListener('mousemove', parallax)
+
+    // Cleanup event listener on component unmount
+    return () => {
+      homeElement.removeEventListener('mousemove', parallax)
+    }
+  }, [parallax])
+
   return (
     <>
-      <div className="container home-page">
-        <div className="text-zone">
-          <h1>
-            Hi,
-            <br />
-            I'm
-            <img src={LogoTitle} alt="developer" />
-            ean
-            <br />A Software Developer
-          </h1>
+      <div className="container home-page" id="home">
+        <div className="home-text-container text-zone">
+          <div className="above-logo-container">
+            <img
+              src="home-images/monitor.svg"
+              alt="coding-computer-image"
+              className="home-vector-monitor object"
+              data-value="3"
+            />
 
-          <h2>Third Year Computer Science Major at UBC</h2>
+            <div className="home-logo-row">
+              <img
+                src="home-images/keyboard.svg"
+                alt="keyboard-image"
+                className="home-vector-keyboard object"
+                data-value="2"
+              />
+              <img
+                src="home-images/mouse.svg"
+                alt="mouse-image"
+                className="home-vector-mouse object"
+                data-value="2"
+              />
+            </div>
+          </div>
 
-          <Link to="/contact" className="flat-button">
-            CONTACT ME
-          </Link>
+          {/* <img className="text-image" src="s-logo.png" alt="developer" /> */}
+          <div className="home-main-text-container">
+            <h1 className="home-text-header object" data-value="-2">
+              Hi, I'm Sean
+              <br />A Software Developer
+            </h1>
+            <h2 className="home-text-sub-header object" data-value="-2">
+              Third Year Computer Science Major at UBC
+            </h2>
+
+            <Link to="/contact" className="flat-button object" data-value="-2">
+              CONTACT ME
+            </Link>
+          </div>
+
+          <div className="below-logo-container">
+            <img
+              src="home-images/programmer.svg"
+              alt="developer-image"
+              className="home-vector object developer"
+              data-value="3"
+            />
+          </div>
+        </div>
+        <div className="home-img-container object" data-value="5">
+          <img
+            className="home-img"
+            src="home-images/capybara.png"
+            alt="image"
+          />
         </div>
 
-        <Logo />
+        {/* <div className="custom-shape-divider-top-1722995686">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              className="shape-fill"
+            ></path>
+          </svg>
+        </div> */}
+        {/* <img src="wave.svg" alt="wave" className="wave" /> */}
       </div>
 
       <Loader type="ball-grid-pulse" />

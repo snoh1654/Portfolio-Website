@@ -1,67 +1,136 @@
+@import '../../utilities/_variables.scss';
+
 .home-page {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 2rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image: url('../../../public/home-images/home-background.jpg');
+  background-size: cover;
+
+  @media screen and (min-width: 901px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  justify-items: center;
   align-items: center;
+  gap: 2rem;
 
-  .text-zone {
-    h1 {
-      color: white;
-      font-size: 4.5rem;
-      margin: 0;
-      font-family: 'Roboto';
-      font-weight: 400;
+  .home-text-container {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
 
-      img {
-        width: 3.5rem;
-        height: auto;
+    .home-main-text-container {
+      .home-text-header {
+        width: 100%;
+        color: $header-color;
+        font-size: 4.5rem;
+        font-family: $header-font;
+        font-weight: $text-weight;
+        margin: 0;
+        text-wrap: wrap;
 
-        margin-left: 1.5rem;
-        animation: rotateIn 1s linear 1s both;
+        // .text-image {
+        //   width: 3.5rem;
+        //   height: auto;
+
+        //   margin-left: 0.5rem;
+        //   vertical-align: baseline;
+
+        //   animation: rotateIn 0.6s linear 0.5s both;
+        // }
+      }
+
+      .home-text-sub-header {
+        color: $sub-header-color;
+        font-family: $header-font;
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.25rem;
+
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+
+        animation: fadeIn 1s 0.9s backwards;
       }
     }
 
-    h2 {
-      color: #8d8d8d;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      font-weight: 300;
-      font-size: 1rem;
-      font-family: sans-serif;
-      letter-spacing: 0.3rem;
-      animation: fadeIn 1s 1.8s backwards;
+    .above-logo-container,
+    .below-logo-container {
+      display: none;
+      @media screen and (min-width: 901px) {
+        display: block;
+      }
+
+      .home-vector {
+        &-monitor {
+          width: 8rem;
+          height: 8rem;
+          margin-left: 1rem;
+          margin-bottom: -1.5rem;
+        }
+        &-keyboard {
+          width: 6rem;
+          height: 6rem;
+        }
+        &-mouse {
+          width: 3.5rem;
+          height: 3.5rem;
+          margin-left: 0.75rem;
+          margin-top: 0.75rem;
+          margin-bottom: 1.5rem;
+        }
+        &.developer {
+          width: 9rem;
+          height: 9rem;
+        }
+      }
+    }
+
+    .above-logo-container {
+      align-self: start;
+
+      animation: fadeIn 1s 1.3s backwards;
+    }
+
+    .below-logo-container {
+      align-self: end;
+
+      animation: fadeIn 1s 1.3s backwards;
+    }
+  }
+
+  .home-img-container {
+    display: none;
+
+    @media screen and (min-width: 901px) {
+      display: block;
+      width: 100%;
+    }
+
+    .home-img {
+      display: block;
+      max-width: 75%;
+
+      @media screen and (min-width: 2201px) {
+        max-width: 60%;
+      }
+      border-radius: 50%;
+      margin: auto;
     }
   }
 }
 
 // !!! Then, deal with Logo component, find a better logo?, learn how to attribute logo
 
-.flat-button {
-  display: block;
-  padding: 1rem 0rem;
-  width: 50%;
-  text-align: center;
-
-  @media screen and (min-width: 701px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  border: 1px solid #ffd700;
-  animation: fadeIn 1s 1.3s backwards;
-  white-space: nowrap;
-  cursor: pointer;
-
-  color: #ffd700;
-  font-size: 1.2rem;
-  font-weight: 400;
-  letter-spacing: 0.3rem;
-  font-family: sans-serif;
-  text-decoration: none;
-
-  &:hover {
-    background: #ffd700;
-    color: #333;
-  }
+.wave {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  background-size: cover;
+  // max-height: 25%;
 }
