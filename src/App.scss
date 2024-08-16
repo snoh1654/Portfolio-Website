@@ -1,40 +1,24 @@
-$primary-color: #ffd700;
-$secondary-color: black;
-$sidebar-color: white;
-
 @import 'animate.css';
+@import 'utilities/_variables.scss';
 @import '~loaders.css/src/animations/ball-grid-pulse.scss';
 
-// @font-face {
-//   font-family: 'Helvetica Neue';
-//   src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
-// }
-
-// @font-face {
-//   font-family: 'La Belle Aurore';
-//   src: url('./assets/fonts/LaBelleAurore.woff2') format('ttf');
-// }
-
-// @font-face {
-//   font-family: 'Coolvetica';
-//   src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('ttf');
-// }
-
-input,
-textarea {
-  font-family: 'Roboto';
+* {
+  font-family: $default-font;
 }
 
 .loader-active {
   display: block;
+  margin: auto;
+
   position: absolute;
   left: 0;
   right: 0;
-  margin: auto;
   top: 0;
   bottom: 0;
-  width: 50px;
-  height: 50px;
+
+  width: 5rem;
+  height: 5rem;
+
   animation: fadeOut 0.5s 0.5s;
   animation-fill-mode: forwards;
 }

@@ -2,13 +2,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  /* outline: solid; */
 }
 
 html {
   font-size: 62.5%;
-  font-family: 'Roboto';
-
   scrollbar-width: thin;
   scrollbar-color: lightgrey lightgrey;
 }
@@ -25,11 +22,7 @@ html::-webkit-scrollbar-thumb {
 
 body {
   margin: 0;
-  font: 300 11px/1.4 'Roboto', 'sans-serif';
   overflow-x: hidden;
-  display: block;
-  background: #022c43;
-  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -66,7 +59,7 @@ body {
 
 @media screen and (min-width: 2201px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   #root {

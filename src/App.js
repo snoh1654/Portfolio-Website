@@ -1,7 +1,7 @@
 import './App.scss'
 import { Route, Routes } from 'react-router-dom'
 import Contact from './components/Contact/Contact'
-import Layout from './components/Layout/Layout'
+import Base from './components/Base/Base'
 import Home from './components/Home/Home'
 import About from './components/About/About'
 import Skills from './components/Skills/Skills'
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Base />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />}></Route>
           <Route path="contact" element={<Contact />}></Route>
