@@ -41,7 +41,7 @@ const About = () => {
             <img
               className="about-img"
               src={'about-images/work/ubc-logo.png'}
-              alt={' image'}
+              alt="UBC Logo"
             />
           </div>
         </div>
@@ -51,7 +51,7 @@ const About = () => {
             <img
               className="about-img"
               src={'about-images/work/teumo.png'}
-              alt={' image'}
+              alt="Teumo Health Technologies Logo"
             />
           </div>
 

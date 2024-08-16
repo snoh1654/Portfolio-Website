@@ -50,7 +50,7 @@ const Home = () => {
           <div className="above-logo-container">
             <img
               src="home-images/monitor.svg"
-              alt="coding-computer-image"
+              alt="monitor-with-code"
               className="home-vector-monitor object"
               data-value="3"
             />
@@ -58,13 +58,13 @@ const Home = () => {
             <div className="home-logo-row">
               <img
                 src="home-images/keyboard.svg"
-                alt="keyboard-image"
+                alt="keyboard"
                 className="home-vector-keyboard object"
                 data-value="2"
               />
               <img
                 src="home-images/mouse.svg"
-                alt="mouse-image"
+                alt="mouse"
                 className="home-vector-mouse object"
                 data-value="2"
               />
@@ -88,7 +88,7 @@ const Home = () => {
           <div className="below-logo-container">
             <img
               src="home-images/programmer.svg"
-              alt="developer-image"
+              alt="developer"
               className="home-vector object developer"
               data-value="3"
             />
@@ -98,7 +98,7 @@ const Home = () => {
           <img
             className="home-img"
             src="home-images/capybara.png"
-            alt="image"
+            alt="portrait"
           />
         </div>
       </div>
