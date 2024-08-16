@@ -1,18 +1,19 @@
-$initial-color: #ffd700;
-$after-color: #022c43;
+@import '../../../utilities/_variables.scss';
 
 .used-skills-container {
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   gap: 0.3rem;
 
   .used-skill {
     display: inline-block;
     width: max-content;
-    background-color: $initial-color;
+    background-color: $skill-default-color;
     border-radius: 10px;
 
     font-size: 1.15rem;
-    color: $after-color;
+    font-weight: $text-header-weight;
+    color: $skill-active-color;
 
     margin: 0px;
     padding: 0.3rem 0.5rem;
@@ -20,8 +21,8 @@ $after-color: #022c43;
     transition: background-color 0.5s ease-out 100ms;
 
     &:hover {
-      color: $initial-color;
-      background-color: $after-color;
+      color: $skill-default-color;
+      background-color: $skill-active-color;
       cursor: default;
     }
   }
