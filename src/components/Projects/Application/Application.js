@@ -16,7 +16,12 @@ const Application = ({
           <div className="application-header">
             <span className="application-name">{name}</span>
 
-            <a href={link} className="github-link" target="_blank">
+            <a
+              href={link}
+              className="github-link"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="github.svg"
                 alt={'Link to ' + { name } + "'s github"}
