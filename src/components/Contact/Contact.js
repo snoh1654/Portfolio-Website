@@ -39,13 +39,15 @@ const Contact = () => {
 
         <div className="contact-body">
           <section className="contact-form-container">
-            <div className="text-zone">
-              <p className="text">
-                Thank you for taking the time to view my portfolio website!
+            <div className="contact-text-container text-zone">
+              <p className="contact-text text">
+                Thank you for spending your time visting my portfolio website! I
+                appreciate your interest in my work.
               </p>
-              <p className="text">
-                Feel free to reach out using either the form below or through my
-                contacts on the right.
+              <p className="contact-text text">
+                If you have any questions, opportunities, or simply wish to
+                connect, please feel free to reach out using the form below or
+                contact me through my provided contact.
               </p>
             </div>
 
@@ -87,14 +89,19 @@ const Contact = () => {
                 required
               ></textarea>
 
-              <input className="flat-button" type="submit" value="SEND" />
+              <input
+                className="form-button flat-button"
+                type="submit"
+                value="SEND"
+              />
             </form>
           </section>
 
           <section className="contact-info-container">
             <h3 className="contact-info-header">Contact Information:</h3>
             <h4 className="contact-info">Email: seannoh1654@yahoo.ca</h4>
-            <h4 className="contact-info">Phone: (604)-441-6549</h4>
+            <h4 className="contact-info">Phone: +1 604-441-6549</h4>
+            {/* <h4 className="contact-info">Phone: (604)-441-6549</h4> */}
             <h4 className="contact-info">
               LinkedIn:
               <a

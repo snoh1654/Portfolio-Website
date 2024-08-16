@@ -1,10 +1,24 @@
+@import '../../utilities/_variables.scss';
+
 .contact-body {
   display: grid;
-  gap: 1.5rem;
+  gap: 4.5rem;
   grid-template-columns: 1fr;
 
   @media screen and (min-width: 1251px) {
     grid-template-columns: 2fr 1fr;
+  }
+
+  .contact-text-container {
+    margin-bottom: 2rem;
+
+    .contact-text {
+      // font-size: 1.5rem;
+      opacity: 0;
+      animation: fadeIn 1.4s 0.5s;
+      animation-delay: 0.9s;
+      animation-fill-mode: forwards;
+    }
   }
 
   .contact-form {
@@ -21,16 +35,21 @@
       height: 3rem;
       display: block;
       padding: 1.5rem;
-      background: #115173;
+      background-color: $form-background-color;
       border: 0;
       border-radius: 5px;
 
-      font-size: 1.2rem;
-      color: #fff;
+      font-size: $text-size;
+      font-weight: $text-weight;
+      color: $text-alternate-color;
 
-      opacity: 0;
-      animation: jackInTheBox 1s 0.5s;
+      animation: slideInLeft 1.4s 0.5s;
       animation-fill-mode: forwards;
+
+      &::placeholder {
+        color: $text-alternate-color;
+        opacity: 0.8;
+      }
 
       &#form {
         &-subject {
@@ -53,8 +72,11 @@
       min-height: 10rem;
     }
 
-    .flat-button {
+    .form-button {
       width: 100%;
+      padding: 0.7rem 1rem;
+      border: 0;
+      border-radius: $rounded-card-borders;
 
       @media screen and (min-width: 901px) {
         grid-column-start: 1;
@@ -63,25 +85,6 @@
       @media screen and (min-width: 1251px) {
         width: 50%;
       }
-
-      background: 00;
-      padding: 0.7rem 1rem;
-
-      color: #ffd700;
-      font-size: 1.25rem;
-      letter-spacing: 3px;
-      text-decoration: none;
-
-      border: 1px solid #ffd700;
-      border-radius: 15px;
-
-      &:active {
-        background-color: black;
-      }
-
-      &:hover {
-        background-color: black;
-      }
     }
   }
 
@@ -89,27 +92,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    border-radius: 15px;
-    background-color: green;
     text-align: center;
 
-    animation: jackInTheBox 1s 0.5s;
+    color: $contact-card-text-color;
+
+    border-radius: $rounded-card-borders;
+    background-color: $contact-card-default-color;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.4);
+
+    animation: slideInRight 1.4s 0.5s;
     animation-fill-mode: forwards;
-    transition: all 0.5s ease-out 0.1s;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 
     &:hover {
-      background-color: purple;
+      background-color: $contact-card-active-color;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     }
 
     .contact-info-header {
       font-size: 2rem;
-      font-weight: 600;
+      font-weight: $text-header-weight;
       letter-spacing: 0.2rem;
     }
+
     .contact-info {
       font-size: 1.5rem;
-      font-weight: 500;
+      font-weight: $text-header-weight;
       letter-spacing: 0.05rem;
 
       .contact-info-link {
@@ -117,7 +125,7 @@
         margin-left: 0.5rem;
 
         .contact-info-link-icon {
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
       }
     }
