@@ -1,0 +1,86 @@
+$black: #001011;
+$white: #eeeeee;
+$primary-color: #005bac;
+$secondary-color: #e40066;
+$tertiary-color: #eac435;
+$primary-active-color: #0099cc;
+$secondary-active-color: #b30050;
+$tertiary-active-color: #ffbf00;
+$active-color: #ff4f9a;
+
+$background-color: #eeeeee;
+
+$text-color: $black;
+$text-header-color: $primary-color;
+$text-header-hover-color: $primary-active-color;
+$text-alternate-color: $white;
+$text-size: 1.35rem;
+$default-font: 'Roboto';
+$header-font: 'Roboto';
+
+$page-header-weight: 700;
+$text-header-weight: 500;
+$text-weight: 300;
+$text-hover-weight: 400;
+
+$rounded-card-borders: 15px;
+
+$image-overlay-text-color: $black;
+
+// Navbar
+$navbar-color: $black;
+$navbar-default-color: $text-alternate-color;
+$navbar-active-color: $active-color;
+
+// Home
+$header-color: $primary-color;
+$sub-header-color: $secondary-color;
+
+// Skills
+$skills-card-background-color: $white;
+$skills-card-border-color: $tertiary-color;
+$skills-card-border-width: 4px;
+$skills-rounding-border-1: $active-color;
+$skills-rounding-border-2: $white;
+$skills-hover-text-color: $text-color;
+
+// Projects
+$project-image-border-color: $primary-color;
+$github-logo-active-color: $tertiary-color;
+
+// Contact
+$form-background-color: $primary-color;
+$contact-card-default-color: $secondary-color;
+$contact-card-active-color: $secondary-active-color;
+$contact-card-text-color: $white;
+
+// Page Header
+$page-header-color-1: $secondary-color;
+$page-header-color-2: #ffb84d;
+$page-header-color-3: #e3648f;
+
+// Used Skills:
+$skill-default-color: $tertiary-color;
+$skill-active-color: $black;
+
+// Button
+$button-background-color: $tertiary-color;
+$button-text-color: $black;
+$button-border-color: $black;
+
+$button-background-hover-color: $tertiary-active-color;
+$button-text-hover-color: $black;
+
+// Old Colors:
+// $primary-color-p: #345995;
+// $secondary-color-p: #e40066;
+// $tertiary-color-p: #eac435;
+// $active-color-p: #ffd700;
+
+// $gundam-blue-color: #005bac;
+// $gundam-red-color: #ff0000;
+// $gundam-yellow-color: #ffd700;
+// $active-color: #0085ff;
+// $active-color: #00e0ff;
+// $primary-color: $primary-color-p;
+// $skills-card-background-color: #f5f5f5;
