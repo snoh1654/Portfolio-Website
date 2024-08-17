@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website repository! This application showcases my work, projects, and skills.
 
-You can view my website at: URL
+You can view my website here: [Portfolio Website Link](https://noh-sean.netlify.app/)
 
 ## Features
 
