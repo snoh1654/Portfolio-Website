@@ -76,6 +76,7 @@
       padding: 0.7rem 1rem;
       border: 0;
       border-radius: $rounded-card-borders;
+      animation: fadeIn 1s 1.1s backwards;
 
       @media screen and (min-width: 901px) {
         grid-column-start: 1;
