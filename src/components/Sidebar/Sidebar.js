@@ -105,7 +105,7 @@ const Sidebar = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://drive.google.com/file/d/1iFbkluP_4WIDwTCi0hPhnEO-XJiCyh54/view?usp=sharing"
+            href="https://drive.google.com/file/d/1n8Hi84E5lJLBmjwx-_yVYubevS714Q5I/view?usp=sharing"
           >
             <FontAwesomeIcon
               icon={faSheetPlastic}
