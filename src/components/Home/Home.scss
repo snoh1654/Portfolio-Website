@@ -50,11 +50,6 @@
 
     .above-logo-container,
     .below-logo-container {
-      display: none;
-      @media screen and (min-width: 901px) {
-        display: block;
-      }
-
       .home-vector {
         &-monitor {
           width: 8rem;
@@ -81,14 +76,22 @@
     }
 
     .above-logo-container {
-      align-self: start;
+      display: none;
+      @media screen and (min-width: 901px) {
+        display: block;
+      }
 
+      align-self: start;
       animation: fadeIn 1s 0.6s backwards;
     }
 
     .below-logo-container {
-      align-self: end;
+      display: none;
+      @media screen and (min-width: 1521px) {
+        display: block;
+      }
 
+      align-self: end;
       animation: fadeIn 1s 0.6s backwards;
     }
   }

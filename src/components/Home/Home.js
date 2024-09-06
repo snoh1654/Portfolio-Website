@@ -97,7 +97,7 @@ const Home = () => {
         <div className="home-img-container object" data-value="5">
           <img
             className="home-img"
-            src="home-images/capybara.png"
+            src="home-images/personal-image.png"
             alt="portrait"
           />
         </div>
